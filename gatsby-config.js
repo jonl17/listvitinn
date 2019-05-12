@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Listvitinn`,
     subTitle: `Myndlistarsýningar á Íslandi`,
+    email: `listvitinn@listvitinn.art`,
   },
   plugins: [
     `gatsby-plugin-lodash`,

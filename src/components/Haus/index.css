@@ -30,6 +30,14 @@
     color: gold;
   }
 }
+@keyframes burgerViti {
+  from {
+    background: white;
+  }
+  to {
+    background: gold;
+  }
+}
 #subtitle {
   margin: auto;
 }
@@ -74,13 +82,16 @@
   margin-bottom: 2.5px;
 }
 #line-one {
-  animation: linewidth 0.7s ease 0s infinite alternate;
+  animation: linewidth 0.7s ease 0s infinite alternate,
+    burgerViti 3s ease-in-out 0s infinite alternate;
 }
 #line-two {
-  animation: linewidth 0.7s ease 0.5s infinite alternate;
+  animation: linewidth 0.7s ease 0.5s infinite alternate,
+    burgerViti 3s ease-in-out 0s infinite alternate;
 }
 #line-three {
-  animation: linewidth 0.7s ease 0.7s infinite alternate;
+  animation: linewidth 0.7s ease 0.7s infinite alternate,
+    burgerViti 3s ease-in-out 0s infinite alternate;
 }
 #line-two {
   margin-bottom: auto;
