@@ -35,17 +35,20 @@ class EventContainer extends React.Component {
       <StaticQuery
         query={graphql`
           query {
-            allFile(
-              filter: {
-                extension: { regex: "/(jpg)|(jpeg)|(png)/" }
-                relativeDirectory: { eq: "pics" }
-              }
-            ) {
+            allMarkdownRemark {
               edges {
                 node {
-                  childImageSharp {
-                    fluid {
-                      ...GatsbyImageSharpFluid
+                  frontmatter {
+                    title
+                    opnun
+                    lokun
+                    stadur
+                    mynd {
+                      childImageSharp {
+                        fluid {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
                     }
                   }
                 }
@@ -53,14 +56,19 @@ class EventContainer extends React.Component {
             }
           }
         `}
-        render={data => (
-          <EventBlock
-            title="exhibition"
-            location="location"
-            time={this.calculateTime("25/05/2019", "01/06/2019")}
-            image={data.allFile.edges[0].node.childImageSharp.fluid}
-          />
-        )}
+        render={data =>
+          data.allMarkdownRemark.edges.map(item => (
+            <EventBlock
+              title={item.node.frontmatter.title}
+              location={item.node.frontmatter.stadur}
+              time={this.calculateTime(
+                item.node.frontmatter.opnun,
+                item.node.frontmatter.lokun
+              )}
+              image={item.node.frontmatter.mynd.childImageSharp.fluid}
+            />
+          ))
+        }
       />
     )
   }
