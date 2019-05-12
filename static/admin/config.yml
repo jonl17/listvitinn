@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: master
+
+media_folder: "static/pics"
+public_folder: "/pics"
+
+collections: 
+  - name: "exhibitions"
+  - label: "Exhibitions"
+  - folder: "static/exhibitions"
+  - create: true
+  - slug: "{{year}}-{{slug}}"
+  - fields: 
+    - {label: "Titill", name: "titill", widget: "string", required: true}
+        - {label: "Titill", name: "titill", widget: "string", required: true}
+    - {label: "Titill", name: "titill", widget: "string", required: true}
+    - {label: "Titill", name: "titill", widget: "string", required: true}
+    - {label: "Titill", name: "titill", widget: "string", required: true}
