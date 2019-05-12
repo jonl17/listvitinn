@@ -5,15 +5,15 @@ backend:
 media_folder: "static/pics"
 public_folder: "/pics"
 
-collections: 
+collections:
   - name: "exhibitions"
-  - label: "Exhibitions"
-  - folder: "static/exhibitions"
-  - create: true
-  - slug: "{{year}}-{{slug}}"
-  - fields: 
-    - {label: "Titill", name: "titill", widget: "string", required: true}
-        - {label: "Titill", name: "titill", widget: "string", required: true}
-    - {label: "Titill", name: "titill", widget: "string", required: true}
-    - {label: "Titill", name: "titill", widget: "string", required: true}
-    - {label: "Titill", name: "titill", widget: "string", required: true}
+    label: "Exhibitions"
+    folder: "static/exhibitions"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - { label: "Titill", name: "titill", widget: "string", required: true }
+      - { label: "Mynd", name: "mynd", widget: "image", required: true }
+      - { label: "Opnun", name: "opnun", widget: "date", required: true }
+      - { label: "Lokun", name: "lokun", widget: "date", required: true }
+      - { label: "Stadur", name: "stadur", widget: "string", required: true }
