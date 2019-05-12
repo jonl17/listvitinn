@@ -1,6 +1,5 @@
 import React from "react"
 import "./index.css"
-import Img from "gatsby-image"
 
 export default props => (
   <div className="Event-block">
@@ -9,6 +8,5 @@ export default props => (
       <p className="Event-days">{props.time}</p>
       <em className="Event-location">@ {props.location}</em>
     </div>
-    <Img fluid={props.image} objectFit="cover" height="100%" />
   </div>
 )

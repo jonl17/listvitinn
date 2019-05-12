@@ -1,7 +1,7 @@
 import React from "react"
 import "./index.css"
 // import { graphql, StaticQuery } from "gatsby"
-// import EventBlock from "../EventBlock"
+import EventBlock from "../EventBlock"
 
 /* 
   this component will receive a list of events 
@@ -32,49 +32,11 @@ class EventContainer extends React.Component {
   }
   render() {
     return (
-      <>
-        <h1>Add some later</h1>
-        <p>testing...</p>
-      </>
-      // <StaticQuery
-      //   query={graphql`
-      //     query {
-      //       allWordpressAcfExhibition {
-      //         edges {
-      //           node {
-      //             id
-      //             acf {
-      //               titill
-      //               Opnun
-      //               lokun
-      //               stadur
-      //               mynd {
-      //                 localFile {
-      //                   childImageSharp {
-      //                     fluid {
-      //                       ...GatsbyImageSharpFluid
-      //                     }
-      //                   }
-      //                 }
-      //               }
-      //             }
-      //           }
-      //         }
-      //       }
-      //     }
-      //   `}
-      //   render={data =>
-      //     data.allWordpressAcfExhibition.edges.map(({ node }) => (
-      //       <EventBlock
-      //         key={node.id}
-      //         title={node.acf.titill}
-      //         location={node.acf.stadur}
-      //         time={this.calculateTime(node.acf.Opnun, node.acf.lokun)}
-      //         image={node.acf.mynd.localFile.childImageSharp.fluid}
-      //       />
-      //     ))
-      //   }
-      // />
+      <EventBlock
+        title="exhibition"
+        location="location"
+        time={this.calculateTime("25/05/2019", "01/06/2019")}
+      />
     )
   }
 }
