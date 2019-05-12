@@ -1,7 +1,7 @@
 import React from "react"
 import "./index.css"
-import { graphql, StaticQuery } from "gatsby"
-import EventBlock from "../EventBlock"
+// import { graphql, StaticQuery } from "gatsby"
+// import EventBlock from "../EventBlock"
 
 /* 
   this component will receive a list of events 
@@ -32,45 +32,46 @@ class EventContainer extends React.Component {
   }
   render() {
     return (
-      <StaticQuery
-        query={graphql`
-          query {
-            allWordpressAcfExhibition {
-              edges {
-                node {
-                  id
-                  acf {
-                    titill
-                    Opnun
-                    lokun
-                    stadur
-                    mynd {
-                      localFile {
-                        childImageSharp {
-                          fluid {
-                            ...GatsbyImageSharpFluid
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        `}
-        render={data =>
-          data.allWordpressAcfExhibition.edges.map(({ node }) => (
-            <EventBlock
-              key={node.id}
-              title={node.acf.titill}
-              location={node.acf.stadur}
-              time={this.calculateTime(node.acf.Opnun, node.acf.lokun)}
-              image={node.acf.mynd.localFile.childImageSharp.fluid}
-            />
-          ))
-        }
-      />
+      <h1>Add some later</h1>
+      // <StaticQuery
+      //   query={graphql`
+      //     query {
+      //       allWordpressAcfExhibition {
+      //         edges {
+      //           node {
+      //             id
+      //             acf {
+      //               titill
+      //               Opnun
+      //               lokun
+      //               stadur
+      //               mynd {
+      //                 localFile {
+      //                   childImageSharp {
+      //                     fluid {
+      //                       ...GatsbyImageSharpFluid
+      //                     }
+      //                   }
+      //                 }
+      //               }
+      //             }
+      //           }
+      //         }
+      //       }
+      //     }
+      //   `}
+      //   render={data =>
+      //     data.allWordpressAcfExhibition.edges.map(({ node }) => (
+      //       <EventBlock
+      //         key={node.id}
+      //         title={node.acf.titill}
+      //         location={node.acf.stadur}
+      //         time={this.calculateTime(node.acf.Opnun, node.acf.lokun)}
+      //         image={node.acf.mynd.localFile.childImageSharp.fluid}
+      //       />
+      //     ))
+      //   }
+      // />
     )
   }
 }
