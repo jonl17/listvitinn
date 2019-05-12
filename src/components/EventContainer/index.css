@@ -50,12 +50,6 @@
   margin: 0;
 }
 
-#image-one {
-  background-image: url("./test.jpg");
-}
-#image-two {
-  background-image: url("./helgi.jpg");
-}
 .Event-image {
   background-size: cover;
   background-repeat: no-repeat;

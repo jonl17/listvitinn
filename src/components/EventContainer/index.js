@@ -1,6 +1,6 @@
 import React from "react"
 import "./index.css"
-// import { graphql, StaticQuery } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import EventBlock from "../EventBlock"
 
 /* 
@@ -32,10 +32,35 @@ class EventContainer extends React.Component {
   }
   render() {
     return (
-      <EventBlock
-        title="exhibition"
-        location="location"
-        time={this.calculateTime("25/05/2019", "01/06/2019")}
+      <StaticQuery
+        query={graphql`
+          query {
+            allFile(
+              filter: {
+                extension: { regex: "/(jpg)|(jpeg)|(png)/" }
+                relativeDirectory: { eq: "pics" }
+              }
+            ) {
+              edges {
+                node {
+                  childImageSharp {
+                    fluid {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `}
+        render={data => (
+          <EventBlock
+            title="exhibition"
+            location="location"
+            time={this.calculateTime("25/05/2019", "01/06/2019")}
+            image={data.allFile.edges[0].node.childImageSharp.fluid}
+          />
+        )}
       />
     )
   }
