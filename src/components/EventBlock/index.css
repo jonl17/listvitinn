@@ -1,0 +1,7 @@
+.Event-block:hover {
+  cursor: pointer;
+}
+.gatsby-image-wrapper {
+  height: 100%;
+  opacity: 0.6;
+}

@@ -1,0 +1,63 @@
+.Event-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* tablet */
+@media screen and (max-width: 1000px) {
+  .Event-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* mobile */
+@media screen and (max-width: 550px) {
+  .Event-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+}
+
+.Event-block {
+  position: relative;
+  margin: 10px;
+  min-height: 300px;
+  max-height: 50vh;
+  background-color: black;
+}
+.Event-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+.Event-info-container {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.Event-title,
+.Event-days,
+.Event-location {
+  margin: 0;
+}
+
+#image-one {
+  background-image: url("./test.jpg");
+}
+#image-two {
+  background-image: url("./helgi.jpg");
+}
+.Event-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

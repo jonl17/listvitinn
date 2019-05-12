@@ -1,0 +1,18 @@
+/*
+    This is the main style configuration file
+*/
+
+* {
+  font-family: "Work Sans", sans-serif;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(16, 16, 16);
+  color: white;
+}
