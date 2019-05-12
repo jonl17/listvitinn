@@ -4,6 +4,7 @@
   box-sizing: border-box;
   position: relative;
   bottom: 0;
+  overflow: hidden;
 }
 .footer-contents {
   list-style: none;
@@ -13,10 +14,15 @@
   margin: 0;
   padding: 0;
 }
-.footer-contents > * {
+.footer-contents > div {
   text-align: center;
   padding: 10px;
   margin: auto;
+}
+.footer-contents > li {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
 }
 .test {
   height: 100px;

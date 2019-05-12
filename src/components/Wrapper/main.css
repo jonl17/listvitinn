@@ -16,3 +16,7 @@ body {
   background-color: rgb(16, 16, 16);
   color: white;
 }
+em {
+  font-size: 12px;
+  opacity: 0.8;
+}

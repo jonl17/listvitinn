@@ -9,10 +9,10 @@ export default ({ data }) => {
     <div className="Footer-container">
       <ul className="footer-contents">
         <li>
-          <em>Listvitinn all rights reserved</em>
+          <em>Listvitinn @ 2019</em>
         </li>
         <li>
-          <em>Contact listvitinn@gmail.is</em>
+          <em>listvitinn@listvitinn.art</em>
         </li>
         <StaticQuery
           query={graphql`
