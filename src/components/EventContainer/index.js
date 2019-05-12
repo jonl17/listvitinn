@@ -32,7 +32,10 @@ class EventContainer extends React.Component {
   }
   render() {
     return (
-      <h1>Add some later</h1>
+      <>
+        <h1>Add some later</h1>
+        <p>testing...</p>
+      </>
       // <StaticQuery
       //   query={graphql`
       //     query {
