@@ -9,6 +9,6 @@ export default props => (
       <p className="Event-days">{props.time}</p>
       <em className="Event-location">@ {props.location}</em>
     </div>
-    <IMG fluid={props.image} />
+    {/* <IMG fluid={props.image} /> */}
   </div>
 )
