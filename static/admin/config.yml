@@ -9,7 +9,5 @@ collections:
   - name: "exhibitions"
     label: "Exhibitions"
     folder: "content/posts"
-    create: true
-    slug: "{{slug}}"
     fields:
       - { label: "Titill", name: "titill", widget: "string", required: true }
