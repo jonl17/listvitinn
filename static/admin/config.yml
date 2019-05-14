@@ -1,6 +1,6 @@
 backend:
-  name: git-gateway
-  branch: master
+  name: github
+  repo: jonl17/listvitinn
 
 media_folder: "static/pics"
 public_folder: "pics"
@@ -8,6 +8,7 @@ public_folder: "pics"
 collections:
   - name: "exhibitions"
     label: "Exhibitions"
-    folder: "content/posts"
+    folder: "exhibitions"
+    create: true
     fields:
       - { label: "Titill", name: "titill", widget: "string", required: true }
