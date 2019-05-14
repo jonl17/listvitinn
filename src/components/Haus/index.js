@@ -2,8 +2,6 @@ import React from "react"
 import "./index.css"
 import { StaticQuery, graphql } from "gatsby"
 
-function handleBurgerClick() {}
-
 export default () => (
   <StaticQuery
     query={graphql`

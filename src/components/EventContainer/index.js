@@ -14,8 +14,8 @@ class EventContainer extends React.Component {
     // Today
     let now = new Date().getTime()
     // get opnun date
-    let words = start.split("/")
-    let opnun = new Date(words[2] + "-" + words[1] + "-" + words[0])
+    let words = start
+    let opnun = new Date(words)
     if (opnun > now) {
       // not opened yet
       let diffTime = opnun - now
@@ -23,8 +23,9 @@ class EventContainer extends React.Component {
       return "Opens in " + timeUntilOpnun + " days"
     }
     // get lokun date
-    let words2 = end.split("/")
-    let lokun = new Date(words2[2] + "-" + words2[1] + "-" + words2[0])
+    let words2 = end
+    // console.log(words2)
+    let lokun = new Date(words2)
     // calculate time until lokun if it has opnened
     let diffTime = lokun - now
     let timeToLokun = Math.floor(diffTime / (1000 * 60 * 60 * 24))
@@ -43,6 +44,7 @@ class EventContainer extends React.Component {
                     opnun
                     lokun
                     stadur
+                    mynd
                   }
                 }
               }
@@ -52,13 +54,14 @@ class EventContainer extends React.Component {
         render={data =>
           data.allMarkdownRemark.edges.map(item => (
             <EventBlock
+              key={item.node.id}
               title={item.node.frontmatter.title}
               location={item.node.frontmatter.stadur}
               time={this.calculateTime(
                 item.node.frontmatter.opnun,
                 item.node.frontmatter.lokun
               )}
-              // image={item.node.frontmatter.mynd.childImageSharp.fluid}
+              image={item.node.frontmatter.mynd}
             />
           ))
         }

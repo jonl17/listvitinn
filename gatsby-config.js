@@ -43,9 +43,28 @@ module.exports = {
         name: "exhibitions",
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/public/pics/`,
+        name: "pics",
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
+      },
+    },
   ],
 }
