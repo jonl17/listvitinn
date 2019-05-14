@@ -8,8 +8,8 @@ public_folder: "pics"
 collections:
   - name: "exhibitions"
     label: "Exhibitions"
-    folder: "/static/exhibitions/"
+    folder: "content/posts"
     create: true
-    slug: "{{name}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Titill", name: "titill", widget: "string", required: true }
