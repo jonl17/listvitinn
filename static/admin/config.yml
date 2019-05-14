@@ -12,4 +12,5 @@ collections:
     slug: "{{slug}}"
     create: true
     fields:
-      - { label: "Titill", name: "titill", widget: "string", required: true }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Opnun", name: "opnun", widget: "date" }
