@@ -12,11 +12,12 @@ import EventBlock from "../EventBlock"
 class EventContainer extends React.Component {
   calculateTime(start, end) {
     // Today
-    let now = new Date()
+    let now = new Date().getTime()
     // get opnun date
     let words = start
     let opnun = new Date(words)
-    if (opnun > now) {
+    console.log(end)
+    if (opnun.getTime() > now) {
       // not opened yet
       let diffTime = opnun - now
       let timeUntilOpnun = Math.floor(diffTime / (1000 * 60 * 60 * 24))
@@ -64,7 +65,7 @@ class EventContainer extends React.Component {
               title={item.node.frontmatter.title}
               location={item.node.frontmatter.stadur}
               time={this.calculateTime(
-                item.node.frontmatter.Opnun,
+                item.node.frontmatter.opnun,
                 item.node.frontmatter.lokun
               )}
               image={item.node.frontmatter.mynd.childImageSharp.fluid}
