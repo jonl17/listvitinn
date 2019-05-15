@@ -20,6 +20,7 @@ exports.createPages = ({ actions, graphql }) => {
               mynd
               opnun
               lokun
+              about
             }
           }
         }

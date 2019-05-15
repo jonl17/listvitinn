@@ -18,6 +18,7 @@ export default function Template({
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.opnun}</h2>
           <h2>{frontmatter.lokun}</h2>
+          <p>{frontmatter.about}</p>
         </div>
         <div className="Ex-detail-image-container">
           <img className="featured-img" src={frontmatter.mynd} />
@@ -37,6 +38,7 @@ export const pageQuery = graphql`
         path
         title
         mynd
+        about
       }
     }
   }
