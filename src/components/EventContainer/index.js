@@ -44,7 +44,13 @@ class EventContainer extends React.Component {
                     opnun
                     lokun
                     stadur
-                    mynd
+                    mynd {
+                      childImageSharp {
+                        fluid {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -61,7 +67,7 @@ class EventContainer extends React.Component {
                 item.node.frontmatter.Opnun,
                 item.node.frontmatter.lokun
               )}
-              image={item.node.frontmatter.mynd}
+              image={item.node.frontmatter.mynd.childImageSharp.fluid}
             />
           ))
         }
