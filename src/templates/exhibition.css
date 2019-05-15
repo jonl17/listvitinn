@@ -1,0 +1,25 @@
+.Ex-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-sizing: border-box;
+  padding: 25px;
+}
+.featured-img {
+  max-height: 100vh;
+  width: 100%;
+}
+.Ex-detail-image-container {
+  box-sizing: border-box;
+  padding: 10px;
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .Ex-detail-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1, 1fr);
+  }
+  .featured-img {
+    width: 100%;
+  }
+}

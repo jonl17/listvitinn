@@ -107,3 +107,9 @@
     display: none;
   }
 }
+
+.Home-anchor {
+  text-decoration: none;
+  text-emphasis-color: inherit;
+  margin-left: 20px;
+}

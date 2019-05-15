@@ -46,6 +46,7 @@ class EventContainer extends React.Component {
                     lokun
                     stadur
                     mynd
+                    path
                   }
                 }
               }
@@ -63,6 +64,7 @@ class EventContainer extends React.Component {
                 item.node.frontmatter.lokun
               )}
               image={item.node.frontmatter.mynd}
+              path={item.node.frontmatter.path}
             />
           ))
         }
