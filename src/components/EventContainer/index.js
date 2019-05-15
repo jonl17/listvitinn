@@ -48,7 +48,7 @@ class EventContainer extends React.Component {
                     mynd {
                       childImageSharp {
                         fluid {
-                          ...GatsbyImageSharpFluid
+                          src
                         }
                       }
                     }

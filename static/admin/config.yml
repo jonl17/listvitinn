@@ -2,7 +2,7 @@ backend:
   name: github
   repo: jonl17/listvitinn
 
-media_folder: "static/pics"
+media_folder: "/static/pics"
 public_folder: "pics"
 
 collections:

@@ -13,6 +13,23 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              name: "pics", // Must match the source name ^
+            },
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `static`,
@@ -24,18 +41,6 @@ module.exports = {
       options: {
         path: `${__dirname}/exhibitions/`,
         name: "exhibitions",
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          `gatsby-remark-relative-images`,
-          {
-            resolve: `gatsby-remark-images`,
-            options: {},
-          },
-        ],
       },
     },
     `gatsby-transformer-sharp`,
