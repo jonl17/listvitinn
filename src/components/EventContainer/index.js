@@ -58,7 +58,7 @@ class EventContainer extends React.Component {
               title={item.node.frontmatter.title}
               location={item.node.frontmatter.stadur}
               time={this.calculateTime(
-                item.node.frontmatter.opnun,
+                item.node.frontmatter.Opnun,
                 item.node.frontmatter.lokun
               )}
               image={item.node.frontmatter.mynd}

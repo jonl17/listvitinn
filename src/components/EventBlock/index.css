@@ -5,3 +5,7 @@
   height: 100%;
   opacity: 0.6;
 }
+.Event-block {
+  background-size: 100%;
+  background-position: center;
+}
