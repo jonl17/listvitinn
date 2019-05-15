@@ -12,7 +12,7 @@ import EventBlock from "../EventBlock"
 class EventContainer extends React.Component {
   calculateTime(start, end) {
     // Today
-    let now = new Date().getTime()
+    let now = new Date()
     // get opnun date
     let words = start
     let opnun = new Date(words)
