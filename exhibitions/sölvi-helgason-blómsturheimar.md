@@ -38,8 +38,7 @@ about: >+
   velvilja. 
 
 
-  EN:
-
+about_en: >-
 
   Sölvi Helgason (1820-1895), or Sólon Íslandus as he also called himself, is
   indisputably Iceland’s most fascinating folk artist; a charismatic outsider
@@ -76,7 +75,6 @@ about: >+
   preserved in Akureyri Museum. These museums receive sincere thanks for a
   rewarding collaboration and  goodwill.
    
-
 path: /exhibition/blomsturheimar
 ---
 
