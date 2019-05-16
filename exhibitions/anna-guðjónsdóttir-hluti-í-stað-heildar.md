@@ -15,6 +15,7 @@ about: >+
   málverkum sem spegla rýmið sjálft og opna jafnframt inn í aðra og ófyrirséða
   heima. 
 
+  <br>
 
   Undanfarin ár hefur listamönnum verið boðið að takast á við A-sal
   Hafnarhússins með nýjum innsetningum. Arkítektúr salarins einkennist af
@@ -24,6 +25,7 @@ about: >+
   Allar kölluðust þær með ólíkum hætti á við umhverfið. Í kjölfar sýningar Önnu
   Guðjónsdóttur sýnir Finnbogi Pétursson nýja innsetningu í sama sal. 
 
+  <br>
 
   Anna Guðjónsdóttir (f. 1958) er fædd og uppalin í Reykjavík. Eftir tveggja ára
   nám í höggmyndadeild Myndlista- og handíðaskóla Íslands fór hún til Þýskalands
@@ -33,12 +35,13 @@ about: >+
   því hún sýndi síðast á Íslandi. Anna er búsett í Hamborg en er alltaf með
   annan fótinn hér á landi. 
 
+  <br>
 
-  EN:
-
+about_en: >-
 
   Anna Guðjónsdóttir: Pars pro toto
 
+  <br>
 
   Anna Guðjónsdóttir shows a new work in multiple parts that takes over the
   gallery space. Guðjónsdóttir‘s art is deeply rooted in painting, reflecting
@@ -49,7 +52,7 @@ about: >+
   her exhibition, Pars pro toto, the gallery becomes a vitrine of sorts,
   accessible by viewers. They are surrounded by paintings reflecting the space
   itself as well as opening up other unforeseen dimensions.
-   
+   <br>
   In recent years artists have been invited to take on the A-Gallery of
   Reykjavík Art Museum’s Hafnarhús. The gallery’s architecture is characterized
   by heavy columns of this former warehouse and large windows filling up the
@@ -59,6 +62,7 @@ about: >+
   exceptional way. Following Anna Guðjónsdóttir’s exhibition it is Finnbogi
   Pétursson’s turn.
 
+  <br>
 
   Anna Guðjónsdóttir (b. 1958) was born and raised in Reykjavík, Iceland. After
   studying in the sculpting department of The Icelandic College of Art and
@@ -68,6 +72,7 @@ about: >+
   it has been a while since her last show in Iceland. She currently lives and
   works in Hamburg.
 
+  <br>
 path: /exhibition/annagudjonsdottir
 ---
 
