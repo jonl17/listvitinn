@@ -46,6 +46,7 @@ about: >+
 
   Myndband, 10,04 mín.
 
+about_en: ...
 path: /exhibition/steinavasulka
 ---
 
