@@ -4,7 +4,7 @@ opnun: 2019-01-19T09:15:41.873Z
 lokun: 2020-02-16T09:15:41.912Z
 mynd: /pics/piramidarnir_large.jpg
 stadur: Ásmundarsafn
-about: >-
+about: >+
   Árið 2019 er ár listar í almenningsrými hjá Listasafni Reykjavíkur. Af því
   tilefni verður lögð áhersla á útilistaverk í Ásmundarsafni á árinu.
 
@@ -37,9 +37,7 @@ about: >-
   hugmynda hans um að listin eigi ekki að vera fyrir fáa útvalda heldur hluti af
   daglegu lífi allrar alþýðu. Ásmundur Sveinsson lést árið 1982, 89 ára gamall.
 
-
-  EN:
-
+about_en: >-
 
   Ásmundur Sveinsson: Under the Same Sky – Art in Public Spaces
 
