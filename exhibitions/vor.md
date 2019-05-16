@@ -40,6 +40,7 @@ about: >
   verið út  vegleg sýningarskrá á íslensku og ensku og reglulega verða
   leiðsagnir um sýninguna með þátttöku listamanna. Leiðsögn um sýningar
   Listasafnsins er alla fimmtudaga, á íslensku kl. 16 og á ensku kl. 16.30.
+about_en: ...
 path: /exhibition/vor
 ---
 
