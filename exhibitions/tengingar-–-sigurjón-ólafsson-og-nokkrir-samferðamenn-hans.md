@@ -4,7 +4,7 @@ opnun: 2018-10-20T09:43:24.471Z
 lokun: 2019-10-06T09:43:24.506Z
 mynd: /pics/visifingur-web.jpg
 stadur: Listasafn Sigurjóns Ólafssonar
-about: >-
+about: >
   Í tilefni þess að þann 21. október 2018 eru liðin 30 ár frá því að Listasafn
   Sigurjóns Ólafssonar var opnað almenningi, er efnt til sýningar þar sem
   fjórtán myndlistarmenn, sem allir tengdust Sigurjóni og list hans með einum
@@ -42,10 +42,7 @@ about: >-
   stigaganginn og tengir sýningarnar tvær.
    
   Sýningarstjóri: Birgitta Spur 
-
-
-  EN:
-
+about_en: >-
 
   Connections – Sculptures by Sigurjón Ólafsson and some of his Contemporaries
 
