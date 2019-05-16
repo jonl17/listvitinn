@@ -1,5 +1,5 @@
 ---
-title: Gröf
+title: 'D37 Gunnar Jónsson: Gröf'
 opnun: 2019-05-16T08:36:41.368Z
 lokun: 2019-06-23T08:36:41.433Z
 mynd: /pics/kynningarmynd_large.jpg
