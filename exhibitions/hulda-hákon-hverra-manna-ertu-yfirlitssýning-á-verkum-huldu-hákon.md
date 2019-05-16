@@ -84,6 +84,10 @@ about: >
 
 
   Curator Harpa Þórsdóttir.
+
+
+  Photo: Hulda Hákon, ENJOYING THE MIDNIGHT SUN (DETAIL) / Í miðnætursól
+  (hluti), 2016
 path: /exhibition/huldahakon
 ---
 
