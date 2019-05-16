@@ -4,7 +4,7 @@ opnun: 2019-05-01T09:22:21.457Z
 lokun: 2020-01-05T09:22:21.493Z
 mynd: /pics/mao_in_oslo_large_skorin.jpg
 stadur: Listasafn Reykjavíkur
-about: >-
+about: >
   Erró er einna fyrstur vestrænna listamanna til að tileinka sér goðsögn og
   myndir af Mao Zedong. Á árunum 1972 til 1980 málaði Erró seríuna Chinese
   Paintings, meira en 130 málverk sem segja sögu hins mikla leiðtoga sem fer
@@ -23,10 +23,7 @@ about: >-
   Það var Kínverska serían sem gerði Erró þekktan í alþjóðlegu samhengi.
   Sýningin í Hafnarhúsinu hefur að geyma málverk, samklippur og grafíkmyndir úr
   safneign Listasafns Reykjavíkur.
-
-
-  EN:
-
+about_en: >-
 
   Erró: Mao’s World Tour
 
