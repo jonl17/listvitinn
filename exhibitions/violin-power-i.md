@@ -1,5 +1,5 @@
 ---
-title: VIOLIN POWER I
+title: Violin Power I
 opnun: 2019-02-08T09:38:27.920Z
 lokun: 2019-12-31T09:38:27.961Z
 mynd: /pics/steina-2cviolin-power-2cbls.232.jpg
