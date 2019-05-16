@@ -1,7 +1,7 @@
 ---
 title: 'Páll Haukur: Sannleikslaugin'
-opnun: 2019-05-16T10:18:42.628Z
-lokun: 2019-05-16T10:18:42.664Z
+opnun: 2019-05-01T10:18:42.628Z
+lokun: 2019-05-31T10:18:42.664Z
 mynd: /pics/páll-haukur-11.jpg
 stadur: Ásmundarsalur
 about: >
