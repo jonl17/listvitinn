@@ -4,7 +4,7 @@ opnun: 2019-05-16T08:36:41.368Z
 lokun: 2019-06-23T08:36:41.433Z
 mynd: /pics/kynningarmynd_large.jpg
 stadur: Listasafn Reykjavíkur
-about: >-
+about: >
   Verið velkomin á opnun sýningarinnar í Listasafni Reykjavíkur - Hafnarhúsi,
   fimmtudag 16. maí kl. 20.00. Tónlist og hamingjustund til kl. 22.00.
 
@@ -25,12 +25,7 @@ about: >-
   til að vinna í fyrsta sinn að einkasýningu í opinberu listasafni og beina
   athygli gesta að nýjum og áhugaverðum hræringum innan listheimsins.
   Sýningarröðin hóf göngu sína árið 2007. 
-
-
-
-  EN:
-
-
+about_en: >-
   You are invited to the opening of the exhibition at Reykjavík Art Museum -
   Hafnarhús, Thursday 16 May at 20h00. Music and Happy Hour until 22h00.
 
