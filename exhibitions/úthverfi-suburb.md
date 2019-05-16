@@ -4,7 +4,7 @@ opnun: 2019-05-17T10:08:44.083Z
 lokun: 2019-08-25T10:08:44.145Z
 mynd: /pics/úthverfi-1024x536.jpg
 stadur: Gerðuberg
-about: >-
+about: >
   HJÓLIÐ er sýningaröð sem Myndhöggvarafélagið í Reykjavík setur upp í opinberu
   rými þar sem listaverk þræða sig eftir hjóla- og göngustígum borgarinnar.
   Sýningin ÚTHVERFI er annar áfangi í röð fimm sumarsýninga sem settar verða upp
@@ -34,10 +34,7 @@ about: >-
   sem liggja að baki verkunum. Verkefnastjóri ÚTHVERFIS+ í Gerðubergi
 
   Hubert Gromny
-
-
-  EN:
-
+about_en: >
 
   SUBURB
 
@@ -70,52 +67,6 @@ about: >-
   Gerðuberg Culture Centre, with smaller works by the artists, information about
   the work processes and the ideas behind the works. Project Manager of SUBURB+
   in Gerðuberg: Hubert Gromny
-
-
-  POL:
-
-
-  PRZEDMIEŚCIE 
-
-
-  Tytuł wystawy, PRZEDMIEŚCIE, odnosi się do położenia Breiðholtu, najstarszego
-  planowanego osiedla w Reykjavíku. Breiðholt jest najgęściej zaludnionym i
-  zróżnicowanym obszarem mieszkalnym miasta. Znajduje się tu największa ilość
-  willi, a także najwięcej bloków mieszkalnych. Najwyższa jest także liczba
-  mieszkańców i mieszkanek pochodzących z poza Islandii. Wielość kultur wzmacnia
-  różnorodność i wzbogaca życie codzienne dzielnicy. To jednak środowisko
-  naturalne, otoczenie wzniesione ludzką ręką oraz historia tego miejsca tworzą
-  ramę dla powszednich aktywności. Wystawa PRZEDMIEŚCIE stanowi namysł nad
-  dostosowaniem przestrzeni publicznej do kulturowych i społecznych potrzeb
-  wspólnoty. Artyści i artystki mierzą się z historią Breiðholtu, przyglądają
-  się granicy pomiędzy środowiskiem naturalnym, a tym wykreowanym przez
-  człowieka, oraz podejmują współpracę z lokalną społecznością. 
-
-
-  THE WHEEL (KOŁO) to seria ekspozycji inicjowanych przez Stowarzyszenie
-  Rzeźbiarzy i Rzeźbiarek w Reykjavíku. Wystawy odbywają się w przestrzeni
-  publicznej i są ulokowane w sąsiedztwie tras spacerowych i rowerowych.
-  PRZEDMIEŚCIE stanowi drugą odsłonę projektu,jedną z pięciu zaplanowanych
-  wystaw letnich, cyklu kończącego się wraz z pięćdziesiątą rocznicą
-  Stowarzyszenia w 2022. Centralny punkt ekspozycji PRZEDMIEŚCIE+ znajduje się w
-  Bibliotece / Domu Kultury Gerðuberg, gdzie znaleźć można mniejsze realizacje,
-  prześledzić proces powstawania poszczególnych prac oraz zapoznać się z ideą
-  stojąca za konkretnym dziełem. 
-
-
-  Otwarcie wystawy nastąpi w Bibliotece / Domu Kultury Gerðuberg w piątek 17
-  maja o godzinie 17.00. 
-
-
-  Artyści i artystki: Anssi Pulkkinen, Arnar Ásgeirsson, Baldur Geir Bragason,
-  Halldór Ásgeirsson, Hallsteinn Sigurðsson, Kathy Clark, Katrín Inga Jónsdóttir
-  Hjördísardóttir, Ósk Vilhjálmsdóttir, Sindri Leifsson 
-
-
-  Kuratorki: Aðalheiður Valgeirsdóttir & Aldís Arnardóttir 
-
-
-  Koordynator wystawy PRZEDMIEŚCIE+ w Gerðuberg: Hubert Gromny
 path: /exhibition/uthverfi
 ---
 
