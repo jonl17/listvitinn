@@ -4,7 +4,8 @@ opnun: 2019-03-28T10:31:57.730Z
 lokun: 2019-05-25T10:31:57.773Z
 mynd: /pics/63eb10a7f762183b2d62037ddfb9bf5cj.webp
 stadur: i8 Gallery
-about: >-
+about: ...
+about_en: >-
   If Janice Kerbel’s medium is language and other abstract systems, her implied
   one is the human body.
 
