@@ -41,10 +41,7 @@ about: >
 
   Mynd: Hulda Hákon, ENJOYING THE MIDNIGHT SUN (DETAIL) / Í miðnætursól (hluti),
   2016.
-
-
-  EN:
-
+about_en: >
 
   HULDA HÁKON / WHO ARE YOUR PEOPLE?
 
