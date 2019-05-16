@@ -4,7 +4,7 @@ opnun: 2019-05-25T08:57:17.450Z
 lokun: 2020-01-05T08:57:17.520Z
 mynd: /pics/blaklukka_large.jpg
 stadur: Kjarvalsstaðir
-about: >-
+about: >
   Listamaðurinn Eggert Pétursson (f. 1956) hefur sett saman sýningu á
   blómaverkum Jóhannesar S. Kjarvals. Þegar hann tók verkefnið að sér fyrir
   Listasafn Reykjavíkur ákvað Eggert að rannsaka blómaþáttinn í verkum Kjarvals
@@ -29,11 +29,7 @@ about: >-
   sjálfum sér eða fyrir aðra að gefa. Í suðursalnum eru síðan blómafantasíur
   Kjarvals, þar sem andlit og verur fléttast saman við blómapár í málverkum,
   teikningum og rissi. 
-
-
-
-  EN:
-
+about_en: >-
 
   The artist Eggert Pétursson (b. 1956) has assembled an exhibition of the
   floral works of Jóhannes S. Kjarval. Upon taking on this project for Reykjavík
