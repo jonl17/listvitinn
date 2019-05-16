@@ -21,7 +21,11 @@ export default function Template({
           <p>{frontmatter.about}</p>
         </div>
         <div className="Ex-detail-image-container">
-          <img className="featured-img" src={frontmatter.mynd} />
+          <img
+            alt={frontmatter.title}
+            className="featured-img"
+            src={frontmatter.mynd}
+          />
         </div>
       </div>
       <Footer />

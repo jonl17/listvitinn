@@ -9,7 +9,7 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___opnun] }
+        sort: { order: ASC, fields: [frontmatter___lokun] }
         limit: 1000
       ) {
         edges {
@@ -35,7 +35,9 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: node.frontmatter.path,
         component: blogPostTemplate,
-        context: {}, // additional data can be passed via context
+        context: {
+          title: node.frontmatter.title,
+        }, // additional data can be passed via context
       })
     })
   })
