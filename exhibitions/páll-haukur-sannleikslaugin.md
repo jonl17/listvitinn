@@ -4,7 +4,7 @@ opnun: 2019-05-01T10:18:42.628Z
 lokun: 2019-05-31T10:18:42.664Z
 mynd: /pics/páll-haukur-11.jpg
 stadur: Ásmundarsalur
-about: >
+about: >+
   Sannleikslaugin er sýning, eða hugsanlega aðstæður, þar sem gestum býðst að
   efnisgera hugsanir sínar og tilfinningar með því að draga orð, tákn eða línur
   með fingrunum ofaní seigt innihald laugarinnar. Þeirri aðgerð eru þó
@@ -17,9 +17,7 @@ about: >
   krjúpa niður og mæta sjálfum sér í gylltri spegilmynd hunangsins og velta
   fyrir sér hvað er nógur satt til að fá að rjúfa viðkvæmt yfirborðið…
 
-
-  EN:
-
+about_en: >-
 
   The Basin of Truth
 
