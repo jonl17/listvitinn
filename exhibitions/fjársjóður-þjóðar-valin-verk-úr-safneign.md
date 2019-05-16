@@ -4,7 +4,7 @@ opnun: 2017-04-07T09:48:33.134Z
 lokun: 2019-12-31T09:48:33.165Z
 mynd: /pics/svavar-gudnason-i_slandslag-1944_web.jpg
 stadur: Listasafn Íslands
-about: >
+about: >+
   Í fórum Listasafns Íslands eru á tólfta þúsund verka af ýmsum gerðum, frá
   ýmsum löndum og ýmsum tímum. Á sýningunni Fjársjóður þjóðar er dágott úrval
   verka úr þessari safneign, sem gefur yfirlit yfir þróun myndlistar á Íslandi
@@ -26,9 +26,7 @@ about: >
   Hallgrímssyni (1807–1845) á dánarbeði til viðkvæmra samsetninga Margrétar H.
   Blöndal (1970–) úr fundnu efni er langur vegur og merkilegur. 
 
-
-  EN:
-
+about_en: >-
 
   TREASURES OF A NATION
 
