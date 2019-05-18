@@ -18,7 +18,7 @@ export default function Template({
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.opnun}</h2>
           <h2>{frontmatter.lokun}</h2>
-          <button />
+          <button className="language-btn">IS/EN</button>
           <p>{frontmatter.about_en}</p>
         </div>
         <div className="Ex-detail-image-container">
