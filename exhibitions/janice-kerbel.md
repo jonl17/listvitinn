@@ -2,7 +2,7 @@
 title: Janice Kerbel
 opnun: 2019-03-28T10:31:57.730Z
 lokun: 2019-05-25T10:31:57.773Z
-mynd: /pics/63eb10a7f762183b2d62037ddfb9bf5cj.webp
+mynd: /pics/i8.jpg
 stadur: i8 Gallery
 about: ...
 about_en: >-
