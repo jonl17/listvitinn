@@ -4,6 +4,7 @@ import "./exhibition.css"
 import Haus from "../components/Haus"
 import Footer from "../components/Footer"
 import Wrapper from "../components/Wrapper"
+import ExhibitionInfo from "../components/ExhibitionInfo"
 
 export default function Template({
   data, // this prop will be injected by the GraphQL query below.
@@ -15,11 +16,13 @@ export default function Template({
       <Haus />
       <div className="Ex-detail-container">
         <div className="Ex-detail-info">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.opnun}</h2>
-          <h2>{frontmatter.lokun}</h2>
-          <button className="language-btn">IS/EN</button>
-          <p>{frontmatter.about_en}</p>
+          <ExhibitionInfo
+            title={frontmatter.title}
+            opnun={frontmatter.opnun}
+            lokun={frontmatter.lokun}
+            about_is={frontmatter.about}
+            about_en={frontmatter.about_en}
+          />
         </div>
         <div className="Ex-detail-image-container">
           <img

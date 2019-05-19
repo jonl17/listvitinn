@@ -20,3 +20,4 @@ collections:
       - { label: "Icelandic About", name: "about", widget: "text" }
       - { label: "English About", name: "about_en", widget: "text" }
       - { label: "Path", name: "path" }
+      - { label: "About", name: "body", widget: "markdown" }
