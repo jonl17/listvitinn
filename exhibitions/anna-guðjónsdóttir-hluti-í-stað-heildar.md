@@ -70,3 +70,11 @@ about_en: >
 path: /exhibition/annagudjonsdottir
 ---
 
+
+Anna Guðjónsdóttir: Pars pro toto
+
+Anna Guðjónsdóttir shows a new work in multiple parts that takes over the gallery space. Guðjónsdóttir‘s art is deeply rooted in painting, reflecting classic questions on the divide between two-dimensional, painted surface and three-dimensional, real space – the boundary between the original and the copy. Guðjónsdóttir brings these questions about by way of landscape and architecture as well as referring to the shape of the exhibition vitrine. In her exhibition, Pars pro toto, the gallery becomes a vitrine of sorts, accessible by viewers. They are surrounded by paintings reflecting the space itself as well as opening up other unforeseen dimensions.
+
+In recent years artists have been invited to take on the A-Gallery of Reykjavík Art Museum’s Hafnarhús. The gallery’s architecture is characterized by heavy columns of this former warehouse and large windows filling up the gaps of the old loading doors. Recent exhibitions include Ingólfur Arnarsson‘s, Ground Level (2018), Ilmur Stefánsdóttir‘s, Panik (2017) and Monika Grzymala‘s, Envoi (2016). All embraced the surroundings in an exceptional way. Following Anna Guðjónsdóttir’s exhibition it is Finnbogi Pétursson’s turn.
+
+Anna Guðjónsdóttir (b. 1958) was born and raised in Reykjavík, Iceland. After studying in the sculpting department of The Icelandic College of Art and Crafts for two years, she moved to Germany to study at the University of Fine Arts in Hamburg, graduating in 1992. She has received numerous awards for her work, both in Iceland and abroad. She has held exhibitions internationally but it has been a while since her last show in Iceland. She currently lives and works in Hamburg.
