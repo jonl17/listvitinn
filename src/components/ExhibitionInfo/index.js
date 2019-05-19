@@ -1,4 +1,5 @@
 import React from "react"
+import { calculateTime } from "../../helpers/index"
 
 class ExhibitionInfo extends React.Component {
   constructor() {
@@ -33,15 +34,21 @@ class ExhibitionInfo extends React.Component {
     }
   }
   render() {
+    var temp = this.state.about.split("\n")
+    console.log(this.props.lokun)
     return (
       <div>
         <h1>{this.props.title}</h1>
-        <h2>{this.props.opnun}</h2>
-        <h2>{this.props.lokun}</h2>
+        <h2>@ {this.props.stadur}</h2>
+        <h3 className="Ex-counter">
+          {calculateTime(this.props.opnun, this.props.lokun)}
+        </h3>
         <button onClick={() => this.setLanguage()} className="language-btn">
           IS/EN
         </button>
-        <p>{this.state.about}</p>
+        {temp.map(text => (
+          <p>{text}</p>
+        ))}
       </div>
     )
   }

@@ -22,6 +22,7 @@ export default function Template({
             lokun={frontmatter.lokun}
             about_is={frontmatter.about}
             about_en={frontmatter.about_en}
+            stadur={frontmatter.stadur}
           />
         </div>
         <div className="Ex-detail-image-container">
@@ -43,11 +44,13 @@ export const pageQuery = graphql`
       html
       frontmatter {
         opnun(formatString: "MMMM DD, YYYY")
+        lokun(formatString: "MMMM DD, YYYY")
         path
         title
         mynd
         about
         about_en
+        stadur
       }
     }
   }
