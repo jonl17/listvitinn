@@ -16,8 +16,8 @@ exports.createPages = ({ actions, graphql }) => {
   return graphql(`
     {
       allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "/exhibitions/" } }
         sort: { order: ASC, fields: [frontmatter___lokun] }
-        limit: 1000
       ) {
         edges {
           node {
