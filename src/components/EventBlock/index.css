@@ -10,3 +10,9 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.Event-info-container {
+  background-color: rgb(16, 16, 16, 0.4);
+}
+.Event-title {
+  font-size: 25px;
+}

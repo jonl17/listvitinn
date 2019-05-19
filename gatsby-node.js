@@ -8,26 +8,27 @@
 
 const path = require("path")
 
+// sýningar
+
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/exhibition.js`)
+  const exhibitionTemplate = path.resolve(`src/templates/exhibition.js`)
+  const stadurTemplate = path.resolve(`src/templates/stadur.js`)
 
   return graphql(`
     {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/exhibitions/" } }
-        sort: { order: ASC, fields: [frontmatter___lokun] }
-      ) {
+      allMarkdownRemark {
         edges {
           node {
             frontmatter {
               path
               title
-              mynd
               opnun
               lokun
+              mynd
               about
+              location
             }
           }
         }
@@ -37,15 +38,24 @@ exports.createPages = ({ actions, graphql }) => {
     if (result.errors) {
       return Promise.reject(result.errors)
     }
-
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: node.frontmatter.path,
-        component: blogPostTemplate,
-        context: {
-          title: node.frontmatter.title,
-        }, // additional data can be passed via context
-      })
+      if (node.frontmatter.path.includes("exhibition")) {
+        createPage({
+          path: node.frontmatter.path,
+          component: exhibitionTemplate,
+          context: {
+            title: node.frontmatter.title,
+          }, // additional data can be passed via context
+        })
+      } else if (node.frontmatter.path.includes("stadur")) {
+        createPage({
+          path: node.frontmatter.path,
+          component: stadurTemplate,
+          context: {
+            title: node.frontmatter.title,
+          }, // additional data can be passed via context
+        })
+      }
     })
   })
 }

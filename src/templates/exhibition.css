@@ -28,3 +28,12 @@
     width: 100%;
   }
 }
+
+.language-btn {
+  height: 30px;
+  width: 50px;
+  font-weight: bold;
+}
+.language-btn:hover {
+  cursor: pointer;
+}
