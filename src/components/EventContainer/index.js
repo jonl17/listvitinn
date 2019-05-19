@@ -16,7 +16,6 @@ class EventContainer extends React.Component {
     // get opnun date
     let words = start
     let opnun = new Date(words)
-    console.log(end)
     if (opnun.getTime() > now) {
       // not opened yet
       let diffTime = opnun - now

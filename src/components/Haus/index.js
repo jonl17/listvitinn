@@ -15,7 +15,7 @@ export default () => (
     `}
     render={data => (
       <div className="Haus-container">
-        <Link className="Home-anchor" exact to={"/"}>
+        <Link className="Home-anchor" to={"/"}>
           <h1 id="title">{data.site.siteMetadata.title}</h1>
         </Link>
         <div id="burger">
