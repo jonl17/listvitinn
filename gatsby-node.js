@@ -1,61 +1,61 @@
-// gatsby-node.js
+const path = require(`path`)
+const slash = require(`slash`)
 
-// const { fmImagesToRelative } = require("gatsby-remark-relative-images")
-
-// exports.onCreateNode = ({ node }) => {
-//   fmImagesToRelative(node)
-// }
-
-const path = require("path")
-
-// sýningar
-
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-
-  const exhibitionTemplate = path.resolve(`src/templates/exhibition.js`)
-  const stadurTemplate = path.resolve(`src/templates/stadur.js`)
-
-  return graphql(`
-    {
-      allMarkdownRemark {
-        edges {
-          node {
-            frontmatter {
-              path
+  // we use the provided allContentfulBlogPost query to fetch the data from Contentful
+  return graphql(
+    `
+      {
+        allContentfulExhibition {
+          edges {
+            node {
               title
               opnun
               lokun
-              mynd
-              about
-              location
+              stadur {
+                title
+              }
+              slug
+              mynd {
+                fluid(quality: 100) {
+                  sizes
+                }
+              }
+              id
+              aboutIcelandic {
+                aboutIcelandic
+              }
+              aboutEnglish {
+                aboutEnglish
+              }
             }
           }
         }
       }
-    }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      if (node.frontmatter.path.includes("exhibition")) {
-        createPage({
-          path: node.frontmatter.path,
-          component: exhibitionTemplate,
-          context: {
-            title: node.frontmatter.title,
-          }, // additional data can be passed via context
-        })
-      } else if (node.frontmatter.path.includes("stadur")) {
-        createPage({
-          path: node.frontmatter.path,
-          component: stadurTemplate,
-          context: {
-            title: node.frontmatter.title,
-          }, // additional data can be passed via context
-        })
+    `
+  )
+    .then(result => {
+      if (result.errors) {
+        console.log("Error retrieving contentful data", result.errors)
       }
+
+      // Resolve the paths to our template
+      const exhibitionTemplate = path.resolve("./src/templates/exhibition.js")
+
+      // Then for each result we create a page.
+      result.data.allContentfulExhibition.edges.forEach(edge => {
+        createPage({
+          path: `/exhibition/${edge.node.slug}/`,
+          component: slash(exhibitionTemplate),
+          context: {
+            slug: edge.node.slug,
+            id: edge.node.id,
+          },
+        })
+      })
     })
-  })
+    .catch(error => {
+      console.log("Error retrieving contentful data", error)
+    })
 }

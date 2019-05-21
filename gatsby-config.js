@@ -70,6 +70,13 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-netlify-cms`,
+    // `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `fm69pggybjik`,
+        accessToken: `86ZP4e_5JYBXFr8CB44Yxje1SWnXJND-kkYobVhHzcU`,
+      },
+    },
   ],
 }

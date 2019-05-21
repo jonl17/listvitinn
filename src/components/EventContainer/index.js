@@ -11,60 +11,41 @@ import { calculateTime } from "../../helpers/index"
 */
 
 class EventContainer extends React.Component {
-  // calculateTime(start, end) {
-  //   // Today
-  //   let now = new Date().getTime()
-  //   // get opnun date
-  //   let words = start
-  //   let opnun = new Date(words)
-  //   if (opnun.getTime() > now) {
-  //     // not opened yet
-  //     let diffTime = opnun - now
-  //     let timeUntilOpnun = Math.floor(diffTime / (1000 * 60 * 60 * 24))
-  //     return "Opens in " + timeUntilOpnun + " days"
-  //   }
-  //   // get lokun date
-  //   let words2 = end
-  //   // console.log(words2)
-  //   let lokun = new Date(words2)
-  //   // calculate time until lokun if it has opnened
-  //   let diffTime = lokun - now
-  //   let timeToLokun = Math.floor(diffTime / (1000 * 60 * 60 * 24))
-  //   return timeToLokun + " days remaining"
-  // }
   render() {
     return (
       <StaticQuery
         query={graphql`
           query {
-            allMarkdownRemark {
+            allContentfulExhibition {
               edges {
                 node {
-                  frontmatter {
+                  title
+                  opnun
+                  lokun
+                  stadur {
                     title
-                    opnun
-                    lokun
-                    stadur
-                    mynd
-                    path
                   }
+                  slug
+                  mynd {
+                    fluid(quality: 75) {
+                      ...GatsbyContentfulFluid
+                    }
+                  }
+                  id
                 }
               }
             }
           }
         `}
         render={data =>
-          data.allMarkdownRemark.edges.map(item => (
+          data.allContentfulExhibition.edges.map(item => (
             <EventBlock
               key={item.node.id}
-              title={item.node.frontmatter.title}
-              location={item.node.frontmatter.stadur}
-              time={calculateTime(
-                item.node.frontmatter.opnun,
-                item.node.frontmatter.lokun
-              )}
-              image={item.node.frontmatter.mynd}
-              path={item.node.frontmatter.path}
+              title={item.node.title}
+              location={item.node.stadur.title}
+              time={calculateTime(item.node.opnun, item.node.lokun)}
+              image={item.node.mynd}
+              slug={item.node.slug}
             />
           ))
         }

@@ -37,3 +37,6 @@
 .language-btn:hover {
   cursor: pointer;
 }
+.Ex-detail-image {
+  max-height: 100vh;
+}

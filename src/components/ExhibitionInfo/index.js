@@ -46,8 +46,8 @@ class ExhibitionInfo extends React.Component {
         <button onClick={() => this.setLanguage()} className="language-btn">
           IS/EN
         </button>
-        {temp.map(text => (
-          <p>{text}</p>
+        {temp.map(txt => (
+          <p>{txt}</p>
         ))}
       </div>
     )
