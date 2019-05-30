@@ -31,7 +31,7 @@ export default function Template({
           objectPosition="50% 50%"
           objectFit="contain"
           className="Ex-detail-image"
-          sizes={mynd.fluid}
+          fixed={mynd.fixed}
         />
       </div>
       <Footer />
@@ -50,8 +50,8 @@ export const pageQuery = graphql`
       }
       slug
       mynd {
-        fluid(quality: 100) {
-          ...GatsbyContentfulFluid
+        fixed(width: 600) {
+          ...GatsbyContentfulFixed
         }
       }
       id
