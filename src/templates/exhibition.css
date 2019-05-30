@@ -38,5 +38,9 @@
   cursor: pointer;
 }
 .Ex-detail-image {
-  max-height: 100vh;
+  max-height: 500px;
+}
+.Ex-detail-image > picture > img {
+  padding: 50px;
+  height: auto !important;
 }
