@@ -20,34 +20,11 @@
   }
 }
 
-.Event-block {
-  position: relative;
-  min-height: 200px;
-  height: 250px;
-  background-color: black;
-}
 .Event-image {
   height: 100%;
   width: 100%;
   position: absolute;
   opacity: 0.5;
-}
-.Event-info-container {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  z-index: 4;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  text-align: center;
-}
-.Event-title,
-.Event-days,
-.Event-location {
-  margin: 0;
 }
 
 .Event-image {

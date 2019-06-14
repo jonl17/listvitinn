@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
     "bootstrap": "^4.3.1",
     "contentful": "^7.6.0",
     "gatsby": "^2.4.2",
@@ -22,6 +23,7 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sharp": "^2.0.36",
+    "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^3.0.11",
     "gatsby-remark-relative-images": "^0.2.2",
@@ -37,10 +39,14 @@
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "styled-components": "^4.3.1"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "prettier": "^1.17.0",
+    "redux-devtools": "^3.5.0"
   },
   "repository": {
     "type": "git",

@@ -1,17 +1,18 @@
 import React from "react"
-import "./index.css"
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
-export default props => (
-  <Link exact to={"/exhibition/" + props.slug}>
-    <div className="Event-block">
-      <div className="Event-info-container">
-        <h1 className="Event-title">{props.title}</h1>
-        <p className="Event-days">{props.time}</p>
-        <em className="Event-location">@ {props.location}</em>
-      </div>
-      <Img fluid={props.image.fluid} />
-    </div>
+import { EventBlock, InfoContainer, Title, Time, Location } from "./Styled"
+
+export default ({ id, slug, title, time, location, image }) => (
+  <Link key={id} to={"/exhibition/" + slug}>
+    <EventBlock>
+      <InfoContainer>
+        <Title>{title}</Title>
+        <Time>{time}</Time>
+        <Location>{location}</Location>
+      </InfoContainer>
+      <Img style={{ height: `100%` }} fluid={image.fluid} />
+    </EventBlock>
   </Link>
 )

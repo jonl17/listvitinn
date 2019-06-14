@@ -78,5 +78,6 @@ module.exports = {
         accessToken: `86ZP4e_5JYBXFr8CB44Yxje1SWnXJND-kkYobVhHzcU`,
       },
     },
+    `gatsby-plugin-styled-components`,
   ],
 }

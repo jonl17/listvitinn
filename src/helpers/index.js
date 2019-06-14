@@ -25,3 +25,19 @@ export const calculateTime = (start, end) => {
   }
   return timeToLokun + 2 + " days remaining"
 }
+
+export const removeExpired = list => {
+  var d2 = new Date()
+  var expiredCount = 0
+  var newList = []
+  for (var i = 0; i < list.length; i++) {
+    var d = new Date(list[i].node.lokun)
+    if (d >= d2) {
+      newList.push(list[i])
+    } else {
+      expiredCount += 1
+    }
+  }
+  console.log(expiredCount + " expired exhibitions...consider removing from db")
+  return newList
+}
