@@ -1,6 +1,9 @@
 import React from "react"
-import "./index.css"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
+
+import { Container, Description, Title, StyledLink } from "./Styled"
+
+import Burger from "../Burger"
 
 export default () => (
   <StaticQuery
@@ -9,21 +12,19 @@ export default () => (
         site {
           siteMetadata {
             title
+            subtitle
           }
         }
       }
     `}
     render={data => (
-      <div className="Haus-container">
-        <Link className="Home-anchor" to={"/"}>
-          <h1 id="title">{data.site.siteMetadata.title}</h1>
-        </Link>
-        <div id="burger">
-          <span className="line" id="line-one" />
-          <span className="line" id="line-two" />
-          <span className="line" id="line-three" />
-        </div>
-      </div>
+      <Container>
+        <StyledLink to={"/"}>
+          <Title>{data.site.siteMetadata.title}</Title>
+        </StyledLink>
+        <Burger />
+        <Description>{data.site.siteMetadata.subtitle}</Description>
+      </Container>
     )}
   />
 )

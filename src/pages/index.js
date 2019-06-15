@@ -8,15 +8,14 @@ import Haus from "../components/Haus"
 import EventContainer from "../components/EventContainer"
 import Content from "../components/Content"
 import Footer from "../components/Footer"
-import Menu from "../components/Menu"
+// import Menu from "../components/Menu"
 
 import { removeExpired } from "../helpers"
 
 const index = ({ data }) => (
   <Wrapper>
     <Haus />
-    <Menu />
-    <Content>
+    <Content category={"All exhibtions"}>
       <EventContainer
         /* filters the query in helper function */
         queriedExhibitions={removeExpired(data.allContentfulExhibition.edges)}
@@ -35,12 +34,17 @@ export const query = graphql`
           title
           stadur {
             title
+            mynd {
+              fluid {
+                src
+              }
+            }
           }
           opnun
           lokun
           mynd {
             fluid {
-              ...GatsbyContentfulFluid
+              src
             }
           }
           slug

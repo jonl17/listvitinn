@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import "./index.css"
+import { Container, List, Info } from "./Styled"
 
 export default () => {
   return (
@@ -10,6 +10,7 @@ export default () => {
         query {
           site {
             siteMetadata {
+              title
               email
             }
           }
@@ -28,22 +29,22 @@ export default () => {
         }
       `}
       render={data => (
-        <div className="Footer-container">
-          <ul className="footer-contents">
-            <div className="footer-info">
+        <Container>
+          <List>
+            <Info>
               <li>
-                <em>Listvitinn @ 2019</em>
+                <em>{data.site.siteMetadata.title} @ 2019</em>
               </li>
               <li>
                 <em>{data.site.siteMetadata.email}</em>
               </li>
-            </div>
+            </Info>
             <Img
-              className="footer-icon"
+              style={{ padding: `10px`, height: 100, width: 100 }}
               fluid={data.allFile.edges[0].node.childImageSharp.fluid}
             />
-          </ul>
-        </div>
+          </List>
+        </Container>
       )}
     />
   )

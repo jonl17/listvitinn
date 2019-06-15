@@ -1,25 +1,3 @@
-.Event-container {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
-}
-
-/* tablet */
-@media screen and (max-width: 1000px) {
-  .Event-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-/* mobile */
-@media screen and (max-width: 550px) {
-  .Event-container {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0;
-  }
-}
-
 .Event-image {
   height: 100%;
   width: 100%;

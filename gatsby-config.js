@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Listvitinn`,
-    subTitle: `Myndlistarsýningar á Íslandi`,
+    subtitle: `All the fine art exhibitions in Iceland that matter`,
     email: `listvitinn@listvitinn.art`,
   },
   plugins: [
