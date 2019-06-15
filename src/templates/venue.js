@@ -23,7 +23,6 @@ export default ({
       <div className="Stadur-detail-container">
         <div className="Venue-detail-info">
           <h1>{title}</h1>
-          <p>{aboutIcelandic.aboutIcelandic}</p>
           <Img fluid={mynd.fluid} />
         </div>
       </div>
