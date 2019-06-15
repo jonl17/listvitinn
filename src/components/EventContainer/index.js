@@ -1,5 +1,4 @@
 import React from "react"
-import "./index.css"
 import EventBlock from "../EventBlock"
 import { calculateTime } from "../../helpers/index"
 import { initExhibitions } from "../../state/actions"
@@ -10,12 +9,9 @@ import { connect } from "react-redux"
   containing: image, title,
   event duration, etc...
 */
-
 class EventContainer extends React.Component {
   componentDidMount() {
-    for (var i = 0; i < this.props.queriedExhibitions.length; i++) {
-      this.props.dispatch(initExhibitions(this.props.queriedExhibitions[i]))
-    }
+    this.props.dispatch(initExhibitions(this.props.queriedExhibitions))
   }
   render() {
     const { exhibitions } = this.props

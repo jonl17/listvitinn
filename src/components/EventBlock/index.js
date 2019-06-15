@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 import { EventBlock, InfoContainer, Title, Time, Location } from "./Styled"
 
 export default ({ id, slug, title, time, location, image }) => (
-  <Link key={id} to={"/exhibition/" + slug}>
+  <Link key={id} to={"/" + slug}>
     <EventBlock>
       <InfoContainer>
         <Title>{title}</Title>

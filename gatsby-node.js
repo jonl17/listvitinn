@@ -32,6 +32,20 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        allContentfulStadir {
+          edges {
+            node {
+              id
+              title
+              slug
+              mynd {
+                fluid {
+                  src
+                }
+              }
+            }
+          }
+        }
       }
     `
   )
@@ -42,12 +56,23 @@ exports.createPages = ({ graphql, actions }) => {
 
       // Resolve the paths to our template
       const exhibitionTemplate = path.resolve("./src/templates/exhibition.js")
+      const venueTemplate = path.resolve("./src/templates/venue.js")
 
       // Then for each result we create a page.
       result.data.allContentfulExhibition.edges.forEach(edge => {
         createPage({
-          path: `/exhibition/${edge.node.slug}/`,
+          path: `/${edge.node.slug}/`,
           component: slash(exhibitionTemplate),
+          context: {
+            slug: edge.node.slug,
+            id: edge.node.id,
+          },
+        })
+      })
+      result.data.allContentfulStadir.edges.forEach(edge => {
+        createPage({
+          path: `/${edge.node.slug}/`,
+          component: slash(venueTemplate),
           context: {
             slug: edge.node.slug,
             id: edge.node.id,

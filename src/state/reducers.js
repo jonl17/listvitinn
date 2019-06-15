@@ -1,12 +1,13 @@
-import { INIT_EXHIBITIONS, REMOVE_EXHIBITION } from "./actions"
+import { INIT_EXHIBITIONS, REMOVE_EXHIBITION, INIT_VENUES } from "./actions"
 
 export const initialState = {
   exhibitions: [],
+  venues: [],
 }
 
 // /* reducers */
 
-const exhibitionReducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case INIT_EXHIBITIONS:
       return {
@@ -17,9 +18,14 @@ const exhibitionReducer = (state = initialState, action) => {
       let newList = state.exhibitions
       newList.splice(action.index, 1)
       return { ...state, exhibitions: [...newList] }
+    case INIT_VENUES:
+      return {
+        ...state,
+        venues: [...action.venues],
+      }
     default:
       return { ...state }
   }
 }
 
-export default exhibitionReducer
+export default reducer

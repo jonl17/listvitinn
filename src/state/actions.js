@@ -11,3 +11,9 @@ export const removeExhibtion = index => ({
   type: REMOVE_EXHIBITION,
   index,
 })
+
+export const INIT_VENUES = "INIT_VENUES"
+export const initVenues = venues => ({
+  type: INIT_VENUES,
+  venues,
+})

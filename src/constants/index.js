@@ -9,3 +9,10 @@ export const device = {
   tablet: `(min-width: ${size.tablet})`,
   browser: `(min-width: ${size.browser})`,
 }
+
+/* categories */
+
+export const category = {
+  Exhibitions: `Exhibitions`,
+  Venues: `Venues`,
+}
