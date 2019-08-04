@@ -3,7 +3,6 @@ const slash = require(`slash`)
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
-  // we use the provided allContentfulBlogPost query to fetch the data from Contentful
   return graphql(
     `
       {
@@ -18,7 +17,8 @@ exports.createPages = ({ graphql, actions }) => {
               }
               slug
               mynd {
-                fluid(quality: 100) {
+                fluid {
+                  src
                   sizes
                 }
               }

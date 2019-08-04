@@ -10,18 +10,18 @@ export const lineWave = keyframes`
 `
 export const burgerGlow = keyframes`
     from {
-    background: white;
+    background: black;
     }
     to {
-    background: gold;
+    background: yellow;
     }
 `
 
 export const titleGlow = keyframes`
     from {
-    color: white;
+    color: black;
     }
     to {
-    color: gold;
+    color: yellow;
     }
 `

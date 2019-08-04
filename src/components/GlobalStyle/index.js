@@ -1,7 +1,6 @@
-/*
-    This is the main style configuration file
-*/
+import { createGlobalStyle } from "styled-components"
 
+export const GlobalStyle = createGlobalStyle`
 * {
   font-family: "Work Sans", sans-serif;
 }
@@ -13,10 +12,10 @@ body {
   box-sizing: border-box;
 }
 body {
-  background-color: rgb(16, 16, 16);
-  color: white;
+  background-color: white;
 }
 em {
   font-size: 12px;
   opacity: 0.8;
 }
+`

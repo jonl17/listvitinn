@@ -3,19 +3,18 @@ import { connect } from "react-redux"
 import { graphql } from "gatsby"
 
 import "./index.css"
-import Wrapper from "../components/Wrapper"
-import Haus from "../components/Haus"
 import EventContainer from "../components/EventContainer"
 import VenueContainer from "../components/VenueContainer"
 import Content from "../components/Content"
-import Footer from "../components/Footer"
 // import Menu from "../components/Menu"
+import Haus from "../components/Haus"
+import Footer from "../components/Footer"
 
 import { category } from "../constants"
 import { removeExpired } from "../helpers"
 
 const index = ({ data }) => (
-  <Wrapper>
+  <>
     <Haus />
     <Content category={category.Exhibitions}>
       <EventContainer
@@ -27,7 +26,7 @@ const index = ({ data }) => (
       <VenueContainer queriedVenues={data.allContentfulStadir.edges} />
     </Content>
     <Footer />
-  </Wrapper>
+  </>
 )
 
 export const query = graphql`

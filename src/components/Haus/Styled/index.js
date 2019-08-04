@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 export const Container = styled.div`
   box-sizing: border-box;
   padding: 0 20px 0 5px;
-  height: 200px;
+  height: 100px;
   width: 100%;
   display: grid;
   grid-template-columns: 20px 150px auto 50px;
@@ -13,8 +13,6 @@ export const Container = styled.div`
   grid-template-areas:
     "logo title ... burger"
     "descr descr descr descr";
-  background-color: rgb(16, 16, 16);
-  color: white;
   z-index: 10;
 `
 

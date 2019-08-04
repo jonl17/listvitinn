@@ -1,41 +1,45 @@
 import React from "react"
 import { graphql } from "gatsby"
-import "./exhibition.css"
+import ExhibitionInfo from "../components/ExhibitionInfo"
 import Haus from "../components/Haus"
 import Footer from "../components/Footer"
-import Wrapper from "../components/Wrapper"
-import ExhibitionInfo from "../components/ExhibitionInfo"
-import Img from "gatsby-image/withIEPolyfill"
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
-}) {
-  const { title, mynd, opnun, lokun } = data.contentfulExhibition
-  const { aboutIcelandic } = data.contentfulExhibition.aboutIcelandic
-  const { aboutEnglish } = data.contentfulExhibition.aboutEnglish
+import { Container, InfoContainer, Image } from "./Styled"
+
+export default ({
+  data: {
+    contentfulExhibition: {
+      title,
+      mynd,
+      opnun,
+      lokun,
+      stadur: { title: stadurTitle },
+      aboutEnglish: { aboutEnglish },
+      aboutIcelandic: { aboutIcelandic },
+    },
+  },
+}) => {
   return (
-    <Wrapper>
+    <>
       <Haus />
-      <div className="Ex-detail-container">
-        <div className="Ex-detail-info">
+      <Container>
+        <InfoContainer>
           <ExhibitionInfo
             title={title}
             opnun={opnun}
             lokun={lokun}
-            stadur={data.contentfulExhibition.stadur.title}
+            stadur={stadurTitle}
             about_is={aboutIcelandic}
             about_en={aboutEnglish}
           />
-        </div>
-        <Img
-          objectPosition="50% 50%"
-          objectFit="contain"
-          className="Ex-detail-image"
-          fixed={mynd.fixed}
+        </InfoContainer>
+        <Image
+          fluid={mynd.fluid}
+          imgStyle={{ padding: 50, height: "auto !important" }}
         />
-      </div>
+      </Container>
       <Footer />
-    </Wrapper>
+    </>
   )
 }
 
@@ -50,8 +54,8 @@ export const pageQuery = graphql`
       }
       slug
       mynd {
-        fixed(width: 600) {
-          ...GatsbyContentfulFixed
+        fluid(quality: 85) {
+          ...GatsbyContentfulFluid
         }
       }
       id

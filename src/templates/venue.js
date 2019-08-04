@@ -1,33 +1,29 @@
 import React from "react"
 import { graphql } from "gatsby"
-import "./venue.css"
 import Haus from "../components/Haus"
 import Footer from "../components/Footer"
-import Wrapper from "../components/Wrapper"
-import Img from "gatsby-image"
+import VenueInfo from "../components/VenueInfo"
+import { Container, Image } from "./Styled"
 
 export default ({
-  data, // this prop will be injected by the GraphQL query below.
+  data: {
+    contentfulStadir: { title, mynd, id, aboutIcelandic, aboutEnglish },
+  },
 }) => {
-  const {
-    title,
-    slug,
-    mynd,
-    id,
-    aboutIcelandic,
-    aboutEnglish,
-  } = data.contentfulStadir
   return (
-    <Wrapper>
+    <>
       <Haus />
-      <div className="Stadur-detail-container">
-        <div className="Venue-detail-info">
-          <h1>{title}</h1>
-          <Img fluid={mynd.fluid} />
-        </div>
-      </div>
+      <Container>
+        <VenueInfo
+          title={title}
+          about={
+            aboutEnglish !== null ? aboutEnglish.aboutEnglish : "vantar texta"
+          }
+        />
+        <Image fluid={mynd.fluid} />
+      </Container>
       <Footer />
-    </Wrapper>
+    </>
   )
 }
 
