@@ -8,25 +8,11 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/pics/`,
-        name: "pics",
-      },
-    },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `static`,
         path: `${__dirname}/static/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/exhibitions/`,
-        name: "exhibitions",
-      },
-    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
