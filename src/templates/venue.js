@@ -4,10 +4,11 @@ import Haus from "../components/Haus"
 import Footer from "../components/Footer"
 import VenueInfo from "../components/VenueInfo"
 import { Container, Image } from "./Styled"
+import VenueExhibitions from "../components/VenueExhibitions"
 
 export default ({
   data: {
-    contentfulStadir: { title, mynd, id, aboutIcelandic, aboutEnglish },
+    contentfulStadir: { title, mynd, aboutEnglish, exhibition },
   },
 }) => {
   return (
@@ -22,6 +23,9 @@ export default ({
         />
         <Image fluid={mynd.fluid} />
       </Container>
+      <VenueExhibitions
+        exhibitions={exhibition !== null ? exhibition : undefined}
+      />
       <Footer />
     </>
   )
@@ -31,7 +35,6 @@ export const pageQuery = graphql`
   query($slug: String) {
     contentfulStadir(slug: { eq: $slug }) {
       title
-      slug
       mynd {
         fluid {
           ...GatsbyContentfulFluid
@@ -43,6 +46,16 @@ export const pageQuery = graphql`
       }
       aboutEnglish {
         aboutEnglish
+      }
+      exhibition {
+        title
+        lokun
+        slug
+        mynd {
+          fluid {
+            ...GatsbyContentfulFluid
+          }
+        }
       }
     }
   }

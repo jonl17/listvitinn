@@ -23,6 +23,9 @@ export const calculateTime = (start, end) => {
   if (timeToLokun === -1) {
     return "Closes today"
   }
+  if (timeToLokun < -1) {
+    return "Closed"
+  }
   return timeToLokun + 2 + " days remaining"
 }
 

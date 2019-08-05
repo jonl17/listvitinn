@@ -1,0 +1,32 @@
+import React from "react"
+import { connect } from "react-redux"
+import {
+  Container,
+  ExhibitonItem,
+  ExhibitionTitle,
+  Title,
+  Image,
+} from "../PastExhibitions/Styled"
+
+const CurrentExhibitions = ({ current }) => {
+  console.log(current)
+  return (
+    <>
+      <Title>Current exhibitions:</Title>
+      <Container>
+        {current.map((item, index) => (
+          <ExhibitonItem key={index}>
+            <ExhibitionTitle to={"/" + item.slug}>{item.title}</ExhibitionTitle>
+            <Image fluid={item.mynd.fluid} />
+          </ExhibitonItem>
+        ))}
+      </Container>
+    </>
+  )
+}
+
+const mapStateToProps = state => ({
+  current: state.venueReducer.current,
+})
+
+export default connect(mapStateToProps)(CurrentExhibitions)

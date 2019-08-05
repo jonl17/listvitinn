@@ -35,7 +35,6 @@ class ExhibitionInfo extends React.Component {
   }
   render() {
     var temp = this.state.about.split("\n")
-    console.log(this.props.lokun)
     return (
       <div>
         <h1>{this.props.title}</h1>
@@ -46,8 +45,8 @@ class ExhibitionInfo extends React.Component {
         <button onClick={() => this.setLanguage()} className="language-btn">
           IS/EN
         </button>
-        {temp.map(txt => (
-          <p>{txt}</p>
+        {temp.map((txt, index) => (
+          <p key={index}>{txt}</p>
         ))}
       </div>
     )

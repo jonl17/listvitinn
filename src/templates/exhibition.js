@@ -49,6 +49,7 @@ export const pageQuery = graphql`
       title
       opnun
       lokun
+      slug
       stadur {
         title
       }
