@@ -1,5 +1,14 @@
 import React from "react"
 import { calculateTime } from "../../helpers/index"
+import {
+  Container,
+  Title,
+  Stadur,
+  StadurText,
+  ExCounter,
+  LanguageButton,
+  Description,
+} from "./Styled"
 
 class ExhibitionInfo extends React.Component {
   constructor() {
@@ -36,19 +45,21 @@ class ExhibitionInfo extends React.Component {
   render() {
     var temp = this.state.about.split("\n")
     return (
-      <div>
-        <h1>{this.props.title}</h1>
-        <h2>@ {this.props.stadur}</h2>
-        <h3 className="Ex-counter">
+      <Container>
+        <Title>{this.props.title}</Title>
+        <Stadur to={"/" + this.props.slug}>
+          <StadurText>@ {this.props.stadur}</StadurText>
+        </Stadur>
+        <ExCounter>
           {calculateTime(this.props.opnun, this.props.lokun)}
-        </h3>
-        <button onClick={() => this.setLanguage()} className="language-btn">
+        </ExCounter>
+        <LanguageButton onClick={() => this.setLanguage()}>
           IS/EN
-        </button>
+        </LanguageButton>
         {temp.map((txt, index) => (
-          <p key={index}>{txt}</p>
+          <Description key={index}>{txt}</Description>
         ))}
-      </div>
+      </Container>
     )
   }
 }

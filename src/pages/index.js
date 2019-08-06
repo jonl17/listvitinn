@@ -2,7 +2,6 @@ import React from "react"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
 
-import "./index.css"
 import EventContainer from "../components/EventContainer"
 import VenueContainer from "../components/VenueContainer"
 import Content from "../components/Content"

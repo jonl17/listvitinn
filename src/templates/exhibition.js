@@ -13,7 +13,7 @@ export default ({
       mynd,
       opnun,
       lokun,
-      stadur: { title: stadurTitle },
+      stadur: { title: stadurTitle, slug: stadurSlug },
       aboutEnglish: { aboutEnglish },
       aboutIcelandic: { aboutIcelandic },
     },
@@ -31,6 +31,7 @@ export default ({
             stadur={stadurTitle}
             about_is={aboutIcelandic}
             about_en={aboutEnglish}
+            slug={stadurSlug}
           />
         </InfoContainer>
         <Image
@@ -52,6 +53,7 @@ export const pageQuery = graphql`
       slug
       stadur {
         title
+        slug
       }
       slug
       mynd {
