@@ -65,7 +65,8 @@ export const getOpen = list => {
   var newList = []
   for (var i = 0; i < list.length; i++) {
     var lokun = new Date(list[i].node.lokun)
-    if (lokun >= today) {
+    var opnun = new Date(list[i].node.opnun)
+    if (lokun >= today && opnun < today) {
       newList.push(list[i])
     }
   }
