@@ -1,6 +1,6 @@
 import React from "react"
 import EventBlock from "../EventBlock"
-import { initVenues } from "../../state/actions"
+import { initVenues } from "../../state/venueActions"
 import { connect } from "react-redux"
 
 /* 
@@ -27,7 +27,7 @@ class VenueContainer extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  venues: state.reducers.venues,
+  venues: state.venueReducer.venues,
 })
 
 export default connect(mapStateToProps)(VenueContainer)

@@ -2,23 +2,23 @@ import React from "react"
 import { connect } from "react-redux"
 import { graphql } from "gatsby"
 
-import EventContainer from "../components/EventContainer"
+import ExhibitionContainer from "../components/ExhibitionContainer"
 import VenueContainer from "../components/VenueContainer"
 import Content from "../components/Content"
 // import Menu from "../components/Menu"
 import Haus from "../components/Haus"
 import Footer from "../components/Footer"
-
+import ExhibitionFilter from "../components/ExhibitionFilter"
 import { category } from "../constants"
-import { removeExpired } from "../helpers"
 
 const index = ({ data }) => (
   <>
     <Haus />
+    <ExhibitionFilter />
     <Content category={category.Exhibitions}>
-      <EventContainer
+      <ExhibitionContainer
         /* filters the query in helper function */
-        queriedExhibitions={removeExpired(data.allContentfulExhibition.edges)}
+        queriedExhibitions={data.allContentfulExhibition.edges}
       />
     </Content>
     <Content category={category.Venues}>
@@ -44,7 +44,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulExhibition (sort: {fields: lokun}) {
+    allContentfulExhibition(sort: { fields: lokun }) {
       edges {
         node {
           id

@@ -8,3 +8,8 @@ export const getPastExhibitions = list => ({
   type: GET_PAST_EXHIBITIONS,
   list,
 })
+export const INIT_VENUES = "INIT_VENUES"
+export const initVenues = venues => ({
+  type: INIT_VENUES,
+  venues,
+})

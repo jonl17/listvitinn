@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 export const EventBlock = styled.div`
+  transition: 0.3s;
   position: relative;
   min-height: 200px;
   height: 250px;

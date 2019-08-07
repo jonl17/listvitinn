@@ -12,8 +12,8 @@ export const removeExhibtion = index => ({
   index,
 })
 
-export const INIT_VENUES = "INIT_VENUES"
-export const initVenues = venues => ({
-  type: INIT_VENUES,
-  venues,
+export const SET_EXHIBITION_FILTER = "SET_EXHIBITION_FILTER"
+export const setExhibitionFilter = filter => ({
+  type: SET_EXHIBITION_FILTER,
+  filter,
 })

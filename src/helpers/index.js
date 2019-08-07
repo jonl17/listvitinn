@@ -29,18 +29,45 @@ export const calculateTime = (start, end) => {
   return timeToLokun + 2 + " days remaining"
 }
 
-export const removeExpired = list => {
-  var d2 = new Date()
-  var expiredCount = 0
+export const filterExhibitions = (list, filter) => {
+  if (filter === `all`) return list
+  if (filter === `open`) return getOpen(list)
+  if (filter === `closed`) return getClosed(list)
+  if (filter === `opening soon`) return getOpeningSoon(list)
+}
+
+export const getOpeningSoon = list => {
+  var today = new Date()
   var newList = []
   for (var i = 0; i < list.length; i++) {
-    var d = new Date(list[i].node.lokun)
-    if (d >= d2) {
+    var opnun = new Date(list[i].node.opnun)
+    if (today < opnun) {
       newList.push(list[i])
-    } else {
-      expiredCount += 1
     }
   }
-  console.log(expiredCount + " expired exhibitions...consider removing from db")
+  return newList
+}
+
+export const getClosed = list => {
+  var today = new Date()
+  var newList = []
+  for (var i = 0; i < list.length; i++) {
+    var lokun = new Date(list[i].node.lokun)
+    if (today > lokun) {
+      newList.push(list[i])
+    }
+  }
+  return newList
+}
+
+export const getOpen = list => {
+  var today = new Date()
+  var newList = []
+  for (var i = 0; i < list.length; i++) {
+    var lokun = new Date(list[i].node.lokun)
+    if (lokun >= today) {
+      newList.push(list[i])
+    }
+  }
   return newList
 }
