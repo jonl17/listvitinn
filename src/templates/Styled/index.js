@@ -12,5 +12,11 @@ export const InfoContainer = styled.div`
   padding-right: 25px;
 `
 export const Image = styled(Img)`
-  max-height: 500px;
+  width: 100%;
+  object-fit: contain;
+`
+export const ImageContainer = styled.div`
+  box-sizing: border-box;
+  padding: 25px;
+  width: 100%;
 `

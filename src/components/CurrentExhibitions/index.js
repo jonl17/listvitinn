@@ -4,6 +4,7 @@ import {
   Container,
   ExhibitonItem,
   ExhibitionTitle,
+  ExhibitionLink,
   Title,
   Image,
 } from "../PastExhibitions/Styled"
@@ -16,7 +17,9 @@ const CurrentExhibitions = ({ current }) => {
       <Container>
         {current.map((item, index) => (
           <ExhibitonItem key={index}>
-            <ExhibitionTitle to={"/" + item.slug}>{item.title}</ExhibitionTitle>
+            <ExhibitionLink to={"/" + item.slug}>
+              <ExhibitionTitle>{item.title}</ExhibitionTitle>
+            </ExhibitionLink>
             <Image fluid={item.mynd.fluid} />
           </ExhibitonItem>
         ))}

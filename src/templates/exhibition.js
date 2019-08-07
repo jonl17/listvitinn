@@ -4,7 +4,7 @@ import ExhibitionInfo from "../components/ExhibitionInfo"
 import Haus from "../components/Haus"
 import Footer from "../components/Footer"
 
-import { Container, InfoContainer, Image } from "./Styled"
+import { Container, InfoContainer, Image, ImageContainer } from "./Styled"
 
 export default ({
   data: {
@@ -34,10 +34,9 @@ export default ({
             slug={stadurSlug}
           />
         </InfoContainer>
-        <Image
-          fluid={mynd.fluid}
-          imgStyle={{ padding: 50, height: "auto !important" }}
-        />
+        <ImageContainer>
+          <Image fluid={mynd.fluid} />
+        </ImageContainer>
       </Container>
       <Footer />
     </>

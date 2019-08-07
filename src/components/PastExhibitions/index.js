@@ -3,6 +3,7 @@ import { connect } from "react-redux"
 import {
   Container,
   ExhibitonItem,
+  ExhibitionLink,
   ExhibitionTitle,
   Title,
   Image,
@@ -15,7 +16,9 @@ const PastExhibitions = ({ past }) => {
       <Container>
         {past.map((item, index) => (
           <ExhibitonItem key={index}>
-            <ExhibitionTitle to={"/" + item.slug}>{item.title}</ExhibitionTitle>
+            <ExhibitionLink to={"/" + item.slug}>
+              <ExhibitionTitle>{item.title}</ExhibitionTitle>
+            </ExhibitionLink>
             <Image fluid={item.mynd.fluid} />
           </ExhibitonItem>
         ))}

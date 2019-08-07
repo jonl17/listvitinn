@@ -14,7 +14,7 @@ export const ExhibitonItem = styled.div`
   box-sizing: border-box;
   position: relative;
 `
-export const ExhibitionTitle = styled(Link)`
+export const ExhibitionLink = styled(Link)`
   position: absolute;
   z-index: 2;
   height: 150px;
@@ -22,7 +22,20 @@ export const ExhibitionTitle = styled(Link)`
   color: white;
   font-size: 20px;
   margin: 0;
-  background-color: rgb(16, 16, 16, 0.4);
+  text-decoration: none;
+  text-align: center;
+  display: grid;
+`
+export const ExhibitionTitle = styled.p`
+  font-size: 85%;
+  margin: auto;
+  opacity: 0;
+  &&:hover {
+    opacity: 1;
+  }
+  background-color: rgba(16, 16, 16, 0.2);
+  height: 100%;
+  width: 100%;
 `
 export const Image = styled(Img)`
   position: absolute;
