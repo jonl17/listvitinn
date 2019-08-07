@@ -11,7 +11,7 @@ export const calculateTime = (start, end) => {
     // not opened yet
     let diffTime = opnun - now
     let timeUntilOpnun = Math.floor(diffTime / (1000 * 60 * 60 * 24))
-    return "Opens in " + timeUntilOpnun + " days"
+    return "Opens in " + (timeUntilOpnun + 2) + " days"
   }
   // get lokun date
   let words2 = end
