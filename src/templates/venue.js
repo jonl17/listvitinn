@@ -11,6 +11,7 @@ export default ({
     contentfulStadir: { title, mynd, aboutEnglish, exhibition },
   },
 }) => {
+  console.log(exhibition)
   return (
     <>
       <Haus />

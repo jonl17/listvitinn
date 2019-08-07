@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(1, 150px);
+  grid-template-columns: repeat(6, 150px);
   grid-gap: 15px;
 `
 export const Title = styled.h1``
