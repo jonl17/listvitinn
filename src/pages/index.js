@@ -44,7 +44,7 @@ export const query = graphql`
         }
       }
     }
-    allContentfulExhibition {
+    allContentfulExhibition (sort: {fields: lokun}) {
       edges {
         node {
           id
