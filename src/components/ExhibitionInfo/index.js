@@ -54,7 +54,7 @@ class ExhibitionInfo extends React.Component {
           {calculateTime(this.props.opnun, this.props.lokun)}
         </ExCounter>
         <LanguageButton onClick={() => this.setLanguage()}>
-          IS/EN
+          IS/ENG
         </LanguageButton>
         {temp.map((txt, index) => (
           <Description key={index}>{txt}</Description>
