@@ -32,10 +32,12 @@ const findCurrent = list => {
 }
 class VenueExhibitions extends React.Component {
   componentDidMount() {
-    this.props.dispatch(getPastExhibitions(findExpired(this.props.exhibitions)))
-    this.props.dispatch(
-      getCurrentExhibitions(findCurrent(this.props.exhibitions))
-    )
+    if (this.props.exhibitions !== undefined) {
+      this.props.dispatch(getPastExhibitions(findExpired(this.props.exhibitions)))
+      this.props.dispatch(
+        getCurrentExhibitions(findCurrent(this.props.exhibitions))
+      )
+    }
   }
   render() {
     const { exhibitions } = this.props

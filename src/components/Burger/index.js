@@ -50,7 +50,7 @@ const LineThree = styled(Line)`
 export default () => {
   return (
     <Burger>
-      <LineOne />
+      <LineOne/>
       <LineTwo />
       <LineThree />
     </Burger>

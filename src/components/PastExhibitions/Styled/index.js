@@ -27,7 +27,7 @@ export const ExhibitionLink = styled(Link)`
   display: grid;
 `
 export const ExhibitionTitle = styled.p`
-  font-size: 85%;
+  font-size: 75%;
   margin: auto;
   opacity: 0;
   &&:hover {
