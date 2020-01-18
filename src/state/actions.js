@@ -27,3 +27,7 @@ export const triggerMenu = trigger => ({
   type: TRIGGER_MENU,
   trigger,
 })
+export const CHANGE_LANGUAGE = "CHANGE_LANGUAGE"
+export const changeLanguage = () => ({
+  type: CHANGE_LANGUAGE,
+})

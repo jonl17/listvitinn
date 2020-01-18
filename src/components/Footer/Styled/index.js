@@ -48,4 +48,5 @@ export const RVK = styled.img`
   position: absolute;
   right: 35px;
   bottom: 15px;
+  filter: grayscale(100%);
 `

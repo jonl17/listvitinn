@@ -12,8 +12,12 @@ export default ({
       opnun,
       lokun,
       stadur: { title: stadurTitle, slug: stadurSlug },
-      aboutEnglish: { aboutEnglish },
-      aboutIcelandic: { aboutIcelandic },
+      aboutEnglish: {
+        childMarkdownRemark: { html: texti_en },
+      },
+      aboutIcelandic: {
+        childMarkdownRemark: { html: texti_is },
+      },
     },
   },
 }) => {
@@ -26,8 +30,8 @@ export default ({
             opnun={opnun}
             lokun={lokun}
             stadur={stadurTitle}
-            about_is={aboutIcelandic}
-            about_en={aboutEnglish}
+            about_is={texti_is}
+            about_en={texti_en}
             slug={stadurSlug}
           />
         </InfoContainer>
@@ -58,10 +62,14 @@ export const pageQuery = graphql`
       }
       id
       aboutIcelandic {
-        aboutIcelandic
+        childMarkdownRemark {
+          html
+        }
       }
       aboutEnglish {
-        aboutEnglish
+        childMarkdownRemark {
+          html
+        }
       }
     }
   }

@@ -1,67 +1,43 @@
 import React from "react"
 import { calculateTime } from "../../helpers/index"
+import { useSelector } from "react-redux"
+
+/** components */
 import {
   Container,
   Title,
   Stadur,
   StadurText,
   ExCounter,
-  LanguageButton,
   Description,
 } from "./Styled"
+import LanguageButton from "../LanguageButton"
 
-class ExhibitionInfo extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      language: "IS",
-      about_is: "",
-      about_en: "",
-      about: "",
-    }
-  }
-  componentDidMount() {
-    this.setState({
-      about_is: this.props.about_is,
-      about_en: this.props.about_en,
-      /* setting default language to icelandic */
-      about: this.props.about_is,
-    })
-  }
-  setLanguage() {
-    if (this.state.language === "IS") {
-      this.setState({
-        language: "EN",
-        about: this.state.about_en,
-      })
-    }
-    if (this.state.language === "EN") {
-      this.setState({
-        language: "IS",
-        about: this.state.about_is,
-      })
-    }
-  }
-  render() {
-    var temp = this.state.about.split("\n")
-    return (
-      <Container>
-        <Title>{this.props.title}</Title>
-        <Stadur to={"/" + this.props.slug}>
-          <StadurText>@ {this.props.stadur}</StadurText>
-        </Stadur>
-        <ExCounter>
-          {calculateTime(this.props.opnun, this.props.lokun)}
-        </ExCounter>
-        <LanguageButton onClick={() => this.setLanguage()}>
-          IS/ENG
-        </LanguageButton>
-        {temp.map((txt, index) => (
-          <Description key={index}>{txt}</Description>
-        ))}
-      </Container>
-    )
-  }
+const ExhibitionInfo = ({
+  title,
+  opnun,
+  lokun,
+  stadur,
+  about_is,
+  about_en,
+  slug,
+}) => {
+  const language = useSelector(state => state.reducer.language)
+  return (
+    <Container>
+      <Title>{title}</Title>
+      <Stadur to={"/" + slug}>
+        <StadurText>@ {stadur}</StadurText>
+      </Stadur>
+      <ExCounter>{calculateTime(opnun, lokun)}</ExCounter>
+      <LanguageButton></LanguageButton>
+      <Description
+        dangerouslySetInnerHTML={{
+          __html: language === `icelandic` ? about_is : about_en,
+        }}
+      ></Description>
+    </Container>
+  )
 }
 
 export default ExhibitionInfo

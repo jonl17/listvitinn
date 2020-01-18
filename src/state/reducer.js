@@ -4,6 +4,7 @@ import {
   SET_EXHIBITION_FILTER,
   SET_DEVICE,
   TRIGGER_MENU,
+  CHANGE_LANGUAGE,
 } from "./actions"
 
 export const initialState = {
@@ -11,6 +12,7 @@ export const initialState = {
   exhibitions: [],
   exhibitionFilter: `open`,
   menu: `closed`,
+  language: `icelandic`,
 }
 
 // /* reducers */
@@ -48,6 +50,14 @@ const reducer = (state = initialState, action) => {
         status = `closed`
       }
       return { ...state, menu: status }
+    case CHANGE_LANGUAGE:
+      let language
+      if (state.language === `icelandic`) {
+        language = `english`
+      } else {
+        language = `icelandic`
+      }
+      return { ...state, language: language }
     default:
       return { ...state }
   }
