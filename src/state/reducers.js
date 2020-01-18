@@ -5,6 +5,7 @@ import {
 } from "./actions"
 
 export const initialState = {
+  device: undefined,
   exhibitions: [],
   exhibitionFilter: `open`,
 }

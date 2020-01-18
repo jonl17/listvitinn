@@ -38,7 +38,7 @@ export const query = graphql`
           slug
           mynd {
             fluid {
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }
@@ -53,7 +53,7 @@ export const query = graphql`
             title
             mynd {
               fluid {
-                ...GatsbyContentfulFluid
+                ...GatsbyContentfulFluid_tracedSVG
                 aspectRatio
               }
             }
@@ -62,7 +62,7 @@ export const query = graphql`
           lokun
           mynd {
             fluid {
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFluid_tracedSVG
               aspectRatio
             }
           }
