@@ -1,51 +1,54 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
-import { Container, List, Info } from "./Styled"
+import ReykjavikSVG from "../../../static/svg/reykjavik.svg"
 
-export default () => {
+/** components */
+import { Container, ImageContainer, Image, Title, Email, RVK } from "./Styled"
+
+const Footer = ({
+  data: {
+    site: {
+      siteMetadata: { title, email, url },
+    },
+    file: {
+      childImageSharp: { fluid },
+    },
+  },
+}) => {
   return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-              email
-            }
+    <Container>
+      <ImageContainer>
+        <Image fluid={fluid} />
+      </ImageContainer>
+      <Title>{url}</Title>
+      <Email target="_blank" href={"mailto:" + email}>
+        {email}
+      </Email>
+      <RVK src={ReykjavikSVG}></RVK>
+    </Container>
+  )
+}
+
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            title
+            email
+            url
           }
-          allFile(filter: { name: { eq: "viti" } }) {
-            edges {
-              node {
-                size
-                childImageSharp {
-                  fluid(maxWidth: 100, maxHeight: 100) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
+        }
+        file(name: { eq: "viti" }) {
+          childImageSharp {
+            fluid(maxWidth: 100, maxHeight: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
-      `}
-      render={data => (
-        <Container>
-          <List>
-            <Info>
-              <li>
-                <em>{data.site.siteMetadata.title} @ 2019</em>
-              </li>
-              <li>
-                <em>{data.site.siteMetadata.email}</em>
-              </li>
-            </Info>
-            <Img
-              style={{ padding: `10px`, height: 100, width: 100 }}
-              fluid={data.allFile.edges[0].node.childImageSharp.fluid}
-            />
-          </List>
-        </Container>
-      )}
-    />
-  )
-}
+      }
+    `}
+    render={data => <Footer data={data} {...props}></Footer>}
+  />
+)

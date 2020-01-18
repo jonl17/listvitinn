@@ -17,7 +17,7 @@ const Filter = ({ filter, chosenFilter, dispatch }) => {
 }
 
 const mapStateToProps = state => ({
-  chosenFilter: state.reducers.exhibitionFilter,
+  chosenFilter: state.reducer.exhibitionFilter,
 })
 
 export default connect(mapStateToProps)(Filter)

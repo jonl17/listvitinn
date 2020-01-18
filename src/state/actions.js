@@ -17,3 +17,13 @@ export const setExhibitionFilter = filter => ({
   type: SET_EXHIBITION_FILTER,
   filter,
 })
+export const SET_DEVICE = "SET_DEVICE"
+export const setDevice = width => ({
+  type: SET_DEVICE,
+  width,
+})
+export const TRIGGER_MENU = "TRIGGER_MENU"
+export const triggerMenu = trigger => ({
+  type: TRIGGER_MENU,
+  trigger,
+})

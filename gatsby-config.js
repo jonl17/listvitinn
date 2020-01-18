@@ -3,6 +3,7 @@ module.exports = {
     title: `Listvitinn`,
     subtitle: `All the fine art exhibitions in Iceland that matter`,
     email: `listvitinn@listvitinn.art`,
+    url: `listvitinn.art`,
   },
   plugins: [
     {
@@ -39,6 +40,7 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-layout`,
     `gatsby-plugin-lodash`,
     {
       resolve: "gatsby-plugin-web-font-loader",
@@ -52,7 +54,7 @@ module.exports = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /static/,
+          include: /static\\svg/,
         },
       },
     },

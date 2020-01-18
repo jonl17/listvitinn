@@ -2,10 +2,10 @@ import { keyframes } from "styled-components"
 
 export const lineWave = keyframes`
     from {
-    width: 50%;
+    width: 100%
     }
     to {
-    width: 40%;
+    width: 80%;
     }
 `
 export const burgerGlow = keyframes`

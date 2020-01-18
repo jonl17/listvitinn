@@ -26,7 +26,7 @@ export const InfoContainer = styled.div`
   transition: 0.2s;
   &&:hover {
     cursor: pointer;
-    background-color: rgb(255, 215, 0, 0.6);
+    background-color: rgb(255, 215, 0, 0.2);
   }
 `
 
@@ -39,6 +39,7 @@ const TextSharedStyle = css`
 
 export const Title = styled.p`
   font-size: 20px;
+  font-weight: bold;
   ${TextSharedStyle};
 `
 export const Time = styled.p`

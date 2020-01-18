@@ -35,8 +35,8 @@ class ExhibitionContainer extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  exhibitions: state.reducers.exhibitions,
-  filter: state.reducers.exhibitionFilter,
+  exhibitions: state.reducer.exhibitions,
+  filter: state.reducer.exhibitionFilter,
 })
 
 export default connect(mapStateToProps)(ExhibitionContainer)

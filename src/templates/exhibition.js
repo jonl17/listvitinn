@@ -1,8 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import ExhibitionInfo from "../components/ExhibitionInfo"
-import Haus from "../components/Haus"
-import Footer from "../components/Footer"
 
 import { Container, InfoContainer, Image, ImageContainer } from "./Styled"
 
@@ -21,7 +19,6 @@ export default ({
 }) => {
   return (
     <>
-      <Haus />
       <Container>
         <InfoContainer>
           <ExhibitionInfo
@@ -38,7 +35,6 @@ export default ({
           <Image fluid={mynd.fluid} />
         </ImageContainer>
       </Container>
-      <Footer />
     </>
   )
 }

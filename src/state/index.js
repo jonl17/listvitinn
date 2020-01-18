@@ -1,5 +1,5 @@
 import { combineReducers } from "redux"
-import reducers from "./reducers"
+import reducer from "./reducer"
 import venueReducer from "./venueReducer"
 
-export default combineReducers({ reducers, venueReducer })
+export default combineReducers({ reducer, venueReducer })
