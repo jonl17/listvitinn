@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import ExhibitionInfo from "../components/ExhibitionInfo"
 
-import { Container, InfoContainer, Image, ImageContainer } from "./Styled"
+/** components */
+import ExhibitionDetailPage from "../components/ExhibitionDetailPage"
 
 export default ({
   data: {
@@ -11,7 +11,7 @@ export default ({
       mynd,
       opnun,
       lokun,
-      stadur: { title: stadurTitle, slug: stadurSlug },
+      stadur,
       aboutEnglish: {
         childMarkdownRemark: { html: texti_en },
       },
@@ -22,24 +22,15 @@ export default ({
   },
 }) => {
   return (
-    <>
-      <Container>
-        <InfoContainer>
-          <ExhibitionInfo
-            title={title}
-            opnun={opnun}
-            lokun={lokun}
-            stadur={stadurTitle}
-            about_is={texti_is}
-            about_en={texti_en}
-            slug={stadurSlug}
-          />
-        </InfoContainer>
-        <ImageContainer>
-          <Image fluid={mynd.fluid} />
-        </ImageContainer>
-      </Container>
-    </>
+    <ExhibitionDetailPage
+      fluid={mynd.fluid}
+      title={title}
+      stadur={stadur}
+      opnun={opnun}
+      lokun={lokun}
+      texti_en={texti_en}
+      texti_is={texti_is}
+    ></ExhibitionDetailPage>
   )
 }
 

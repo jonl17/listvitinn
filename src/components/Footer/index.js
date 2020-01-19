@@ -1,6 +1,5 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import ReykjavikSVG from "../../../static/svg/reykjavik.svg"
 
 /** components */
 import { Container, ImageContainer, Image, Title, Email, RVK } from "./Styled"
@@ -24,7 +23,6 @@ const Footer = ({
       <Email target="_blank" href={"mailto:" + email}>
         {email}
       </Email>
-      <RVK src={ReykjavikSVG}></RVK>
     </Container>
   )
 }

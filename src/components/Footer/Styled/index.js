@@ -1,12 +1,13 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
+import ReykjavikSVG from "../../../../static/svg/reykjavik.svg"
 
 export const Container = styled.div`
   height: 250px;
   width: 100%;
   box-sizing: border-box;
   position: relative;
-  bottom: 0;
+  bottom: -1px;
   overflow: hidden;
   background: black;
   color: white;
@@ -43,10 +44,9 @@ export const Email = styled.a`
     cursor: pointer;
   }
 `
-export const RVK = styled.img`
+export const RVK = styled(ReykjavikSVG)`
   width: 50px;
   position: absolute;
   right: 35px;
   bottom: 15px;
-  filter: grayscale(100%);
 `

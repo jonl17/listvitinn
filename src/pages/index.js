@@ -26,7 +26,7 @@ const index = ({ data }) => (
 
 export const query = graphql`
   query {
-    allContentfulStadir {
+    allContentfulStadir(sort: { fields: title }) {
       edges {
         node {
           id
