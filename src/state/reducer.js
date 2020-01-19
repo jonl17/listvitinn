@@ -56,7 +56,7 @@ const reducer = (state = initialState, action) => {
       }
       return { ...state, language: language }
     case INIT_FAVOURITE_EXHIBITIONS:
-      return { ...state, favouriteExhibitions: [...action.exhibitions] }
+      return { ...state, favouriteExhibitions: action.exhibitions }
     case APPEND_FAVOURITE_EXHIBITION:
       if (window.localStorage !== undefined) {
         window.localStorage.setItem(
