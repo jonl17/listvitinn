@@ -38,7 +38,10 @@ const FavouriteButton = ({ slug }) => {
   return (
     <Container>
       <Star
-        selected={isSelected(slug, favouriteExhibitions.unique())}
+        selected={
+          favouriteExhibitions !== null &&
+          isSelected(slug, favouriteExhibitions.unique())
+        }
         onClick={() => clickCallBack(dispatch, slug, favouriteExhibitions)}
       ></Star>
     </Container>
