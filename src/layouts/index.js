@@ -1,6 +1,10 @@
 import React from "react"
 import { connect } from "react-redux"
-import { setDevice, triggerMenu } from "../state/actions"
+import {
+  setDevice,
+  triggerMenu,
+  initFavouriteExhibitions,
+} from "../state/actions"
 import { GlobalStyle } from "../components/GlobalStyle"
 
 /** components */
@@ -20,6 +24,15 @@ class Layout extends React.Component {
     this.callBack()
     window.addEventListener("resize", this.callBack)
     window.addEventListener("scroll", this.hideMenu)
+
+    // update store with favourite exhibitions from local storage
+    const windowGlobal = typeof window !== `undefined` && window
+    const savedFavouriteExhibitions = windowGlobal.localStorage.getItem(
+      `favouriteExhibitions`
+    )
+    this.props.dispatch(
+      initFavouriteExhibitions(JSON.parse(savedFavouriteExhibitions))
+    )
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.callBack)

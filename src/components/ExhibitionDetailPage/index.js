@@ -15,6 +15,7 @@ const ExhibitionDetailPage = ({
   lokun,
   texti_is,
   texti_en,
+  slug,
 }) => {
   const language = useSelector(state => state.reducer.language)
   return (
@@ -24,6 +25,7 @@ const ExhibitionDetailPage = ({
         stadur={stadur}
         opnun={opnun}
         lokun={lokun}
+        slug={slug}
       ></Header>
       <ImageContainer>
         <Image fluid={fluid}></Image>

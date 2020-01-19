@@ -1,10 +1,12 @@
 import {
   INIT_EXHIBITIONS,
-  REMOVE_EXHIBITION,
   SET_EXHIBITION_FILTER,
   SET_DEVICE,
   TRIGGER_MENU,
   CHANGE_LANGUAGE,
+  INIT_FAVOURITE_EXHIBITIONS,
+  APPEND_FAVOURITE_EXHIBITION,
+  REMOVE_FAVOURITE_EXHIBITION,
 } from "./actions"
 
 export const initialState = {
@@ -13,9 +15,8 @@ export const initialState = {
   exhibitionFilter: `open`,
   menu: `closed`,
   language: `icelandic`,
+  favouriteExhibitions: [],
 }
-
-// /* reducers */
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
@@ -36,10 +37,6 @@ const reducer = (state = initialState, action) => {
         ...state,
         exhibitions: [...action.exhibitions],
       }
-    case REMOVE_EXHIBITION:
-      let newList = state.exhibitions
-      newList.splice(action.index, 1)
-      return { ...state, exhibitions: [...newList] }
     case SET_EXHIBITION_FILTER:
       return { ...state, exhibitionFilter: action.filter }
     case TRIGGER_MENU:
@@ -58,8 +55,40 @@ const reducer = (state = initialState, action) => {
         language = `icelandic`
       }
       return { ...state, language: language }
+    case INIT_FAVOURITE_EXHIBITIONS:
+      return { ...state, favouriteExhibitions: [...action.exhibitions] }
+    case APPEND_FAVOURITE_EXHIBITION:
+      if (window.localStorage !== undefined) {
+        window.localStorage.setItem(
+          `favouriteExhibitions`,
+          JSON.stringify([...state.favouriteExhibitions, action.exhibition])
+        )
+      }
+      return {
+        ...state,
+        favouriteExhibitions: [
+          ...state.favouriteExhibitions,
+          action.exhibition,
+        ],
+      }
+    case REMOVE_FAVOURITE_EXHIBITION:
+      let newList = []
+      console.log(action.exhibition)
+      for (var exhibition of state.favouriteExhibitions) {
+        if (exhibition !== action.exhibition) {
+          newList.push(exhibition)
+        }
+      }
+      if (window.localStorage !== undefined) {
+        window.localStorage.setItem(
+          `favouriteExhibitions`,
+          JSON.stringify(newList)
+        )
+      }
+      console.log(newList)
+      return { ...state, favouriteExhibitions: newList }
     default:
-      return { ...state }
+      return state
   }
 }
 

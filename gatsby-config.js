@@ -4,6 +4,9 @@ module.exports = {
     subtitle: `All the fine art exhibitions in Iceland that matter`,
     email: `listvitinn@listvitinn.art`,
     url: `listvitinn.art`,
+    subpages: [
+      { name: `Favourite exhibitions`, slug: `/favourite-exhibitions/` },
+    ],
   },
   plugins: [
     {

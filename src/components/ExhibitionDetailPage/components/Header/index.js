@@ -17,7 +17,7 @@ const formatDate = date => {
   return d.toLocaleDateString("en-US", options)
 }
 
-const Header = ({ title, stadur, opnun, lokun }) => {
+const Header = ({ title, stadur, opnun, lokun, slug }) => {
   return (
     <>
       <Title>{title}</Title>
@@ -26,7 +26,7 @@ const Header = ({ title, stadur, opnun, lokun }) => {
       </GalleryLinkContainer>
       <Time>{formatDate(opnun) + " - " + formatDate(lokun)}</Time>
       <Time countdown>{calculateTime(opnun, lokun)}</Time>
-      <FavouriteButton selected></FavouriteButton>
+      <FavouriteButton slug={slug}></FavouriteButton>
     </>
   )
 }

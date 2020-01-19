@@ -1,15 +1,7 @@
-/* action creators */
-
 export const INIT_EXHIBITIONS = "INIT_EXHIBITIONS"
 export const initExhibitions = exhibitions => ({
   type: INIT_EXHIBITIONS,
   exhibitions,
-})
-
-export const REMOVE_EXHIBITION = "REMOVE_EXHIBITION"
-export const removeExhibtion = index => ({
-  type: REMOVE_EXHIBITION,
-  index,
 })
 
 export const SET_EXHIBITION_FILTER = "SET_EXHIBITION_FILTER"
@@ -30,4 +22,19 @@ export const triggerMenu = trigger => ({
 export const CHANGE_LANGUAGE = "CHANGE_LANGUAGE"
 export const changeLanguage = () => ({
   type: CHANGE_LANGUAGE,
+})
+export const INIT_FAVOURITE_EXHIBITIONS = "INIT_FAVOURITE_EXHIBITIONS"
+export const initFavouriteExhibitions = exhibitions => ({
+  type: INIT_FAVOURITE_EXHIBITIONS,
+  exhibitions,
+})
+export const APPEND_FAVOURITE_EXHIBITION = "APPEND_FAVOURITE_EXHIBITION"
+export const appendFavouriteExhibition = exhibition => ({
+  type: APPEND_FAVOURITE_EXHIBITION,
+  exhibition,
+})
+export const REMOVE_FAVOURITE_EXHIBITION = "REMOVE_FAVOURITE_EXHIBITION"
+export const removeFavouriteExhibition = exhibition => ({
+  type: REMOVE_FAVOURITE_EXHIBITION,
+  exhibition,
 })

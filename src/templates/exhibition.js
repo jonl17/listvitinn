@@ -7,6 +7,7 @@ import ExhibitionDetailPage from "../components/ExhibitionDetailPage"
 export default ({
   data: {
     contentfulExhibition: {
+      slug,
       title,
       mynd,
       opnun,
@@ -30,6 +31,7 @@ export default ({
       lokun={lokun}
       texti_en={texti_en}
       texti_is={texti_is}
+      slug={slug}
     ></ExhibitionDetailPage>
   )
 }

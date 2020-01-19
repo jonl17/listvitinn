@@ -5,11 +5,12 @@ import { triggerMenu } from "../../state/actions"
 
 /** components */
 import { Container, Title, StyledLink, Sensor } from "./Styled"
+import SubPages from "./components/SubPages"
 
 const Menu = ({
   data: {
     site: {
-      siteMetadata: { title },
+      siteMetadata: { title, subpages },
     },
   },
 }) => {
@@ -23,6 +24,7 @@ const Menu = ({
             {title}
           </StyledLink>
         </Title>
+        <SubPages pages={subpages}></SubPages>
       </Container>
       {menu === `open` ? (
         <Sensor onClick={() => dispatch(triggerMenu())}></Sensor>
@@ -40,6 +42,10 @@ export default props => (
         site {
           siteMetadata {
             title
+            subpages {
+              name
+              slug
+            }
           }
         }
       }
