@@ -22,7 +22,6 @@ const isSelected = (slug, list) => {
 const clickCallBack = (dispatch, slug, list) => {
   if (list.includes(slug)) {
     dispatch(removeFavouriteExhibition(slug))
-    console.log(slug)
     // and update local storage
   } else {
     dispatch(appendFavouriteExhibition(slug))
@@ -35,7 +34,6 @@ const FavouriteButton = ({ slug }) => {
   const favouriteExhibitions = useSelector(
     state => state.reducer.favouriteExhibitions
   )
-  console.log(favouriteExhibitions)
   return (
     <Container>
       <Star

@@ -10,7 +10,6 @@ import {
 } from "../PastExhibitions/Styled"
 
 const CurrentExhibitions = ({ current }) => {
-  console.log(current)
   return (
     <>
       <Title>Current exhibitions:</Title>

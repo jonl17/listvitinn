@@ -27,7 +27,6 @@ class Layout extends React.Component {
 
     // update store with favourite exhibitions from local storage
     if (window !== `undefined`) {
-      console.log("From layouts: " + localStorage)
       const savedFavouriteExhibitions = localStorage.getItem(
         `favouriteExhibitions`
       )
@@ -37,7 +36,6 @@ class Layout extends React.Component {
         )
       }
     }
-    console.log(this.props.favouriteExhibitions)
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.callBack)
