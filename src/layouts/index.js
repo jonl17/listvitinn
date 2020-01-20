@@ -31,9 +31,11 @@ class Layout extends React.Component {
       const savedFavouriteExhibitions = localStorage.getItem(
         `favouriteExhibitions`
       )
-      this.props.dispatch(
-        initFavouriteExhibitions(JSON.parse(savedFavouriteExhibitions))
-      )
+      if (savedFavouriteExhibitions) {
+        this.props.dispatch(
+          initFavouriteExhibitions(JSON.parse(savedFavouriteExhibitions))
+        )
+      }
     }
     console.log(this.props.favouriteExhibitions)
   }
