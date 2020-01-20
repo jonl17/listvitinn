@@ -56,10 +56,12 @@ const reducer = (state = initialState, action) => {
       }
       return { ...state, language: language }
     case INIT_FAVOURITE_EXHIBITIONS:
+      console.log("From init favourite exhibits: " + action.exhibition)
       return { ...state, favouriteExhibitions: action.exhibitions }
     case APPEND_FAVOURITE_EXHIBITION:
-      if (window.localStorage !== undefined) {
-        window.localStorage.setItem(
+      if (window !== undefined) {
+        console.log("From add favourite exhibits: " + action.exhibition)
+        localStorage.setItem(
           `favouriteExhibitions`,
           JSON.stringify([...state.favouriteExhibitions, action.exhibition])
         )
@@ -73,19 +75,15 @@ const reducer = (state = initialState, action) => {
       }
     case REMOVE_FAVOURITE_EXHIBITION:
       let newList = []
-      console.log(action.exhibition)
       for (var exhibition of state.favouriteExhibitions) {
         if (exhibition !== action.exhibition) {
           newList.push(exhibition)
         }
       }
-      if (window.localStorage !== undefined) {
-        window.localStorage.setItem(
-          `favouriteExhibitions`,
-          JSON.stringify(newList)
-        )
+      if (window !== undefined) {
+        console.log("From add remove exhibits: " + action.exhibition)
+        localStorage.setItem(`favouriteExhibitions`, JSON.stringify(newList))
       }
-      console.log(newList)
       return { ...state, favouriteExhibitions: newList }
     default:
       return state

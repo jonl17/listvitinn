@@ -35,6 +35,7 @@ const FavouriteButton = ({ slug }) => {
   const favouriteExhibitions = useSelector(
     state => state.reducer.favouriteExhibitions
   )
+  console.log(favouriteExhibitions)
   return (
     <Container>
       <Star

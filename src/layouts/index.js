@@ -26,13 +26,16 @@ class Layout extends React.Component {
     window.addEventListener("scroll", this.hideMenu)
 
     // update store with favourite exhibitions from local storage
-    const windowGlobal = typeof window !== `undefined` && window
-    const savedFavouriteExhibitions = windowGlobal.localStorage.getItem(
-      `favouriteExhibitions`
-    )
-    this.props.dispatch(
-      initFavouriteExhibitions(JSON.parse(savedFavouriteExhibitions))
-    )
+    if (window !== `undefined`) {
+      console.log("From layouts: " + localStorage)
+      const savedFavouriteExhibitions = localStorage.getItem(
+        `favouriteExhibitions`
+      )
+      this.props.dispatch(
+        initFavouriteExhibitions(JSON.parse(savedFavouriteExhibitions))
+      )
+    }
+    console.log(this.props.favouriteExhibitions)
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.callBack)
@@ -64,6 +67,7 @@ class Layout extends React.Component {
 const mapStateToProps = state => ({
   device: state.reducer.device,
   menu: state.reducer.menu,
+  favouriteExhibitions: state.reducer.favouriteExhibitions,
 })
 
 export default connect(mapStateToProps)(Layout)
