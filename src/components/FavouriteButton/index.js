@@ -1,8 +1,8 @@
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import {
-  appendFavouriteExhibition,
-  removeFavouriteExhibition,
+  appendStarredExhibition,
+  removeStarredExhibition,
 } from "../../state/actions"
 
 /** components */
@@ -21,27 +21,27 @@ const isSelected = (slug, list) => {
 
 const clickCallBack = (dispatch, slug, list) => {
   if (list.includes(slug)) {
-    dispatch(removeFavouriteExhibition(slug))
+    dispatch(removeStarredExhibition(slug))
     // and update local storage
   } else {
-    dispatch(appendFavouriteExhibition(slug))
+    dispatch(appendStarredExhibition(slug))
     // and update local storage
   }
 }
 
 const FavouriteButton = ({ slug }) => {
   const dispatch = useDispatch()
-  const favouriteExhibitions = useSelector(
-    state => state.reducer.favouriteExhibitions
+  const starredExhibitions = useSelector(
+    state => state.reducer.starredExhibitions
   )
   return (
     <Container>
       <Star
         selected={
-          favouriteExhibitions !== null &&
-          isSelected(slug, favouriteExhibitions.unique())
+          starredExhibitions !== null &&
+          isSelected(slug, starredExhibitions.unique())
         }
-        onClick={() => clickCallBack(dispatch, slug, favouriteExhibitions)}
+        onClick={() => clickCallBack(dispatch, slug, starredExhibitions)}
       ></Star>
     </Container>
   )

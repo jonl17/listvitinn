@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const Container = styled.div`
-  height: 75px;
+  height: 100%;
   width: ${props => props.width};
   transition: 0.2s ease-in-out;
   position: fixed;

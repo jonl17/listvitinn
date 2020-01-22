@@ -24,17 +24,17 @@ export const changeLanguage = () => ({
   type: CHANGE_LANGUAGE,
 })
 export const INIT_FAVOURITE_EXHIBITIONS = "INIT_FAVOURITE_EXHIBITIONS"
-export const initFavouriteExhibitions = exhibitions => ({
+export const initStarredExhibitions = exhibitions => ({
   type: INIT_FAVOURITE_EXHIBITIONS,
   exhibitions,
 })
 export const APPEND_FAVOURITE_EXHIBITION = "APPEND_FAVOURITE_EXHIBITION"
-export const appendFavouriteExhibition = exhibition => ({
+export const appendStarredExhibition = exhibition => ({
   type: APPEND_FAVOURITE_EXHIBITION,
   exhibition,
 })
 export const REMOVE_FAVOURITE_EXHIBITION = "REMOVE_FAVOURITE_EXHIBITION"
-export const removeFavouriteExhibition = exhibition => ({
+export const removeStarredExhibition = exhibition => ({
   type: REMOVE_FAVOURITE_EXHIBITION,
   exhibition,
 })

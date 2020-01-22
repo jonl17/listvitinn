@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import {
   setDevice,
   triggerMenu,
-  initFavouriteExhibitions,
+  initStarredExhibitions,
 } from "../state/actions"
 import { GlobalStyle } from "../components/GlobalStyle"
 
@@ -27,12 +27,10 @@ class Layout extends React.Component {
 
     // update store with favourite exhibitions from local storage
     if (window !== `undefined`) {
-      const savedFavouriteExhibitions = localStorage.getItem(
-        `favouriteExhibitions`
-      )
-      if (savedFavouriteExhibitions) {
+      const savedStarredExhibitions = localStorage.getItem(`starredExhibitions`)
+      if (savedStarredExhibitions) {
         this.props.dispatch(
-          initFavouriteExhibitions(JSON.parse(savedFavouriteExhibitions))
+          initStarredExhibitions(JSON.parse(savedStarredExhibitions))
         )
       }
     }
@@ -67,7 +65,7 @@ class Layout extends React.Component {
 const mapStateToProps = state => ({
   device: state.reducer.device,
   menu: state.reducer.menu,
-  favouriteExhibitions: state.reducer.favouriteExhibitions,
+  starredExhibitions: state.reducer.starredExhibitions,
 })
 
 export default connect(mapStateToProps)(Layout)

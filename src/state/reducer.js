@@ -15,7 +15,7 @@ export const initialState = {
   exhibitionFilter: `open`,
   menu: `closed`,
   language: `icelandic`,
-  favouriteExhibitions: [],
+  starredExhibitions: [],
 }
 
 const reducer = (state = initialState, action) => {
@@ -56,32 +56,29 @@ const reducer = (state = initialState, action) => {
       }
       return { ...state, language: language }
     case INIT_FAVOURITE_EXHIBITIONS:
-      return { ...state, favouriteExhibitions: action.exhibitions }
+      return { ...state, starredExhibitions: action.exhibitions }
     case APPEND_FAVOURITE_EXHIBITION:
       if (window !== undefined) {
         localStorage.setItem(
-          `favouriteExhibitions`,
-          JSON.stringify([...state.favouriteExhibitions, action.exhibition])
+          `starredExhibitions`,
+          JSON.stringify([...state.starredExhibitions, action.exhibition])
         )
       }
       return {
         ...state,
-        favouriteExhibitions: [
-          ...state.favouriteExhibitions,
-          action.exhibition,
-        ],
+        starredExhibitions: [...state.starredExhibitions, action.exhibition],
       }
     case REMOVE_FAVOURITE_EXHIBITION:
       let newList = []
-      for (var exhibition of state.favouriteExhibitions) {
+      for (var exhibition of state.starredExhibitions) {
         if (exhibition !== action.exhibition) {
           newList.push(exhibition)
         }
       }
       if (window !== undefined) {
-        localStorage.setItem(`favouriteExhibitions`, JSON.stringify(newList))
+        localStorage.setItem(`starredExhibitions`, JSON.stringify(newList))
       }
-      return { ...state, favouriteExhibitions: newList }
+      return { ...state, starredExhibitions: newList }
     default:
       return state
   }

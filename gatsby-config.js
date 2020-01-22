@@ -5,7 +5,8 @@ module.exports = {
     email: `listvitinn@listvitinn.art`,
     url: `listvitinn.art`,
     subpages: [
-      { name: `Favourite exhibitions`, slug: `/favourite-exhibitions/` },
+      { name: `Artists`, slug: `/artists/` },
+      { name: `Starred exhibitions`, slug: `/starred-exhibitions/` },
     ],
   },
   plugins: [
