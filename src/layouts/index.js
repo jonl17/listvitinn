@@ -51,15 +51,18 @@ class Layout extends React.Component {
   }
   render() {
     return (
-      <>
-        {/* <SEO></SEO> */}
-        <GlobalStyle></GlobalStyle>
-        <Menu></Menu>
-        <Haus></Haus>
-        <Burger></Burger>
-        <Container>{this.props.children}</Container>
-        <Footer></Footer>
-      </>
+      // <>
+      //   {/* <SEO></SEO> */}
+      //   <GlobalStyle></GlobalStyle>
+      //   <Menu></Menu>
+      //   <Haus></Haus>
+      //   <Burger></Burger>
+      //   <Container>{this.props.children}</Container>
+      //   <Footer></Footer>
+      // </>
+      <p style={{ fontSize: "80px", textAlign: "center" }}>
+        Þessi síða er í vinnslu
+      </p>
     )
   }
 }
