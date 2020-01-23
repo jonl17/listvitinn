@@ -27,7 +27,7 @@ export default props => (
         allContentfulArtist(sort: { fields: nafn }) {
           nodes {
             nafn
-            syningar {
+            exhibition {
               title
             }
           }

@@ -11,18 +11,19 @@ import { category } from "../constants"
 
 const index = ({ data }) => {
   return (
-    <>
-      <ExhibitionFilter />
-      <Content category={category.Exhibitions}>
-        <ExhibitionContainer
-          /* filters the query in helper function */
-          queriedExhibitions={data.allContentfulExhibition.edges}
-        />
-      </Content>
-      <Content category={category.Venues}>
-        <VenueContainer queriedVenues={data.allContentfulStadir.edges} />
-      </Content>
-    </>
+    // <>
+    //   <ExhibitionFilter />
+    //   <Content category={category.Exhibitions}>
+    //     <ExhibitionContainer
+    //       /* filters the query in helper function */
+    //       queriedExhibitions={data.allContentfulExhibition.edges}
+    //     />
+    //   </Content>
+    //   <Content category={category.Venues}>
+    //     <VenueContainer queriedVenues={data.allContentfulStadir.edges} />
+    //   </Content>
+    // </>
+    <p></p>
   )
 }
 
