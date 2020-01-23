@@ -4,7 +4,8 @@ import {
   SET_DEVICE,
   TRIGGER_MENU,
   CHANGE_LANGUAGE,
-  INIT_FAVOURITE_EXHIBITIONS,
+  INIT_STARRED_EXHIBITION_SLUGS,
+  INIT_STARRED_EXHIBITIONS,
   APPEND_FAVOURITE_EXHIBITION,
   REMOVE_FAVOURITE_EXHIBITION,
 } from "./actions"
@@ -15,7 +16,8 @@ export const initialState = {
   exhibitionFilter: `open`,
   menu: `closed`,
   language: `icelandic`,
-  starredExhibitions: [],
+  starredExhibitions: [], // this one keeps actual exhibition objects
+  starredExhibitionSlugs: [], // this one is exactly like the one stored in local storage
 }
 
 const reducer = (state = initialState, action) => {
@@ -55,30 +57,45 @@ const reducer = (state = initialState, action) => {
         language = `icelandic`
       }
       return { ...state, language: language }
-    case INIT_FAVOURITE_EXHIBITIONS:
+    case INIT_STARRED_EXHIBITION_SLUGS:
+      return { ...state, starredExhibitionSlugs: action.slugs }
+    case INIT_STARRED_EXHIBITIONS:
       return { ...state, starredExhibitions: action.exhibitions }
     case APPEND_FAVOURITE_EXHIBITION:
       if (window !== undefined) {
         localStorage.setItem(
-          `starredExhibitions`,
-          JSON.stringify([...state.starredExhibitions, action.exhibition])
+          `starredExhibitions`, // we only want to save the slugs in local storage
+          JSON.stringify([
+            ...state.starredExhibitionSlugs,
+            action.exhibition.slug,
+          ])
         )
       }
       return {
         ...state,
+        starredExhibitionSlugs: [
+          ...state.starredExhibitionSlugs,
+          action.exhibition.slug,
+        ],
         starredExhibitions: [...state.starredExhibitions, action.exhibition],
       }
     case REMOVE_FAVOURITE_EXHIBITION:
-      let newList = []
-      for (var exhibition of state.starredExhibitions) {
-        if (exhibition !== action.exhibition) {
-          newList.push(exhibition)
+      let newListOfSlugs = []
+      for (var i = 0; i < state.starredExhibitionSlugs.length; i++) {
+        if (state.starredExhibitionSlugs[i] !== action.exhibition.slug) {
+          newListOfSlugs.push(state.starredExhibitionSlugs[i])
         }
       }
       if (window !== undefined) {
-        localStorage.setItem(`starredExhibitions`, JSON.stringify(newList))
+        localStorage.setItem(
+          `starredExhibitions`,
+          JSON.stringify(newListOfSlugs)
+        )
       }
-      return { ...state, starredExhibitions: newList }
+      return {
+        ...state,
+        starredExhibitionSlugs: newListOfSlugs,
+      }
     default:
       return state
   }

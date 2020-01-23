@@ -17,16 +17,20 @@ const formatDate = date => {
   return d.toLocaleDateString("en-US", options)
 }
 
-const Header = ({ title, stadur, opnun, lokun, slug }) => {
+const Header = ({ exhibition }) => {
   return (
     <>
-      <Title>{title}</Title>
+      <Title>{exhibition.title}</Title>
       <GalleryLinkContainer>
-        <GalleryLink to={"/" + stadur.slug}>@ {stadur.title}</GalleryLink>
+        <GalleryLink to={"/" + exhibition.stadur.slug}>
+          @ {exhibition.stadur.title}
+        </GalleryLink>
       </GalleryLinkContainer>
-      <Time>{formatDate(opnun) + " - " + formatDate(lokun)}</Time>
-      <Time countdown>{calculateTime(opnun, lokun)}</Time>
-      <FavouriteButton slug={slug}></FavouriteButton>
+      <Time>
+        {formatDate(exhibition.opnun) + " - " + formatDate(exhibition.lokun)}
+      </Time>
+      <Time countdown>{calculateTime(exhibition.opnun, exhibition.lokun)}</Time>
+      <FavouriteButton exhibition={exhibition}></FavouriteButton>
     </>
   )
 }

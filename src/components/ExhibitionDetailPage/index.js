@@ -7,33 +7,21 @@ import { Container, ImageContainer, Image, Content } from "./Styled"
 import LanguageButton from "../LanguageButton"
 import Header from "./components/Header"
 
-const ExhibitionDetailPage = ({
-  title,
-  fluid,
-  stadur,
-  opnun,
-  lokun,
-  texti_is,
-  texti_en,
-  slug,
-}) => {
+const ExhibitionDetailPage = ({ exhibition }) => {
   const language = useSelector(state => state.reducer.language)
   return (
     <Container>
-      <Header
-        title={title}
-        stadur={stadur}
-        opnun={opnun}
-        lokun={lokun}
-        slug={slug}
-      ></Header>
+      <Header exhibition={exhibition}></Header>
       <ImageContainer>
-        <Image fluid={fluid}></Image>
+        <Image fluid={exhibition.mynd.fluid}></Image>
       </ImageContainer>
       <LanguageButton></LanguageButton>
       <Content
         dangerouslySetInnerHTML={{
-          __html: language === `icelandic` ? texti_is : texti_en,
+          __html:
+            language === `icelandic`
+              ? exhibition.aboutIcelandic.childMarkdownRemark.html
+              : exhibition.aboutEnglish.childMarkdownRemark.html,
         }}
       ></Content>
     </Container>

@@ -19,29 +19,29 @@ const isSelected = (slug, list) => {
   return list.includes(slug)
 }
 
-const clickCallBack = (dispatch, slug, list) => {
-  if (list.includes(slug)) {
-    dispatch(removeStarredExhibition(slug))
-    // and update local storage
+const clickCallBack = (dispatch, exhibition, slugs) => {
+  if (slugs.includes(exhibition.slug)) {
+    dispatch(removeStarredExhibition(exhibition))
   } else {
-    dispatch(appendStarredExhibition(slug))
-    // and update local storage
+    dispatch(appendStarredExhibition(exhibition))
   }
 }
 
-const FavouriteButton = ({ slug }) => {
+const FavouriteButton = ({ exhibition }) => {
   const dispatch = useDispatch()
-  const starredExhibitions = useSelector(
-    state => state.reducer.starredExhibitions
+  const starredExhibitionSlugs = useSelector(
+    state => state.reducer.starredExhibitionSlugs
   )
   return (
     <Container>
       <Star
         selected={
-          starredExhibitions !== null &&
-          isSelected(slug, starredExhibitions.unique())
+          starredExhibitionSlugs !== null &&
+          isSelected(exhibition.slug, starredExhibitionSlugs.unique())
         }
-        onClick={() => clickCallBack(dispatch, slug, starredExhibitions)}
+        onClick={() =>
+          clickCallBack(dispatch, exhibition, starredExhibitionSlugs)
+        }
       ></Star>
     </Container>
   )

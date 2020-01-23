@@ -23,9 +23,14 @@ export const CHANGE_LANGUAGE = "CHANGE_LANGUAGE"
 export const changeLanguage = () => ({
   type: CHANGE_LANGUAGE,
 })
-export const INIT_FAVOURITE_EXHIBITIONS = "INIT_FAVOURITE_EXHIBITIONS"
+export const INIT_STARRED_EXHIBITION_SLUGS = "INIT_STARRED_EXHIBITION_SLUGS"
+export const initStarredExhibitionSlugs = slugs => ({
+  type: INIT_STARRED_EXHIBITION_SLUGS,
+  slugs,
+})
+export const INIT_STARRED_EXHIBITIONS = "INIT_STARRED_EXHIBITIONS"
 export const initStarredExhibitions = exhibitions => ({
-  type: INIT_FAVOURITE_EXHIBITIONS,
+  type: INIT_STARRED_EXHIBITIONS,
   exhibitions,
 })
 export const APPEND_FAVOURITE_EXHIBITION = "APPEND_FAVOURITE_EXHIBITION"

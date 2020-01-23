@@ -1,14 +1,11 @@
 import React from "react"
-import EventBlock from "../EventBlock"
-import { calculateTime, filterExhibitions } from "../../helpers/index"
+import { filterExhibitions } from "../../helpers/index"
 import { initExhibitions } from "../../state/actions"
 import { connect } from "react-redux"
 
-/* 
-  this component will receive a list of events 
-  containing: image, title,
-  event duration, etc...
-*/
+/** components */
+import Block from "./components/Block"
+
 class ExhibitionContainer extends React.Component {
   componentDidMount() {
     this.props.dispatch(
@@ -20,14 +17,7 @@ class ExhibitionContainer extends React.Component {
     return (
       <>
         {filterExhibitions(exhibitions, filter).map((item, index) => (
-          <EventBlock
-            key={index}
-            title={item.node.title}
-            location={item.node.stadur.title}
-            time={calculateTime(item.node.opnun, item.node.lokun)}
-            image={item.node.mynd}
-            slug={item.node.slug}
-          />
+          <Block key={index} event={item.node} />
         ))}
       </>
     )

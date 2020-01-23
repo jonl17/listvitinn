@@ -15,7 +15,6 @@ export const calculateTime = (start, end) => {
   }
   // get lokun date
   let words2 = end
-  // console.log(words2)
   let lokun = new Date(words2)
   // calculate time until lokun if it has opnened
   let diffTime = lokun - now

@@ -9,20 +9,22 @@ import Content from "../components/Content"
 import ExhibitionFilter from "../components/ExhibitionFilter"
 import { category } from "../constants"
 
-const index = ({ data }) => (
-  <>
-    <ExhibitionFilter />
-    <Content category={category.Exhibitions}>
-      <ExhibitionContainer
-        /* filters the query in helper function */
-        queriedExhibitions={data.allContentfulExhibition.edges}
-      />
-    </Content>
-    <Content category={category.Venues}>
-      <VenueContainer queriedVenues={data.allContentfulStadir.edges} />
-    </Content>
-  </>
-)
+const index = ({ data }) => {
+  return (
+    <>
+      <ExhibitionFilter />
+      <Content category={category.Exhibitions}>
+        <ExhibitionContainer
+          /* filters the query in helper function */
+          queriedExhibitions={data.allContentfulExhibition.edges}
+        />
+      </Content>
+      <Content category={category.Venues}>
+        <VenueContainer queriedVenues={data.allContentfulStadir.edges} />
+      </Content>
+    </>
+  )
+}
 
 export const query = graphql`
   query {

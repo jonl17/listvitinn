@@ -1,6 +1,8 @@
 import styled, { css } from "styled-components"
+import { Link } from "gatsby"
+import Img from "gatsby-image"
 
-export const EventBlock = styled.div`
+export const Container = styled(Link)`
   transition: 0.3s;
   position: relative;
   height: 100%;
@@ -8,6 +10,8 @@ export const EventBlock = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  text-decoration: none;
+  color: inherit;
 `
 export const InfoContainer = styled.div`
   height: 100%;
@@ -42,9 +46,6 @@ export const Title = styled.p`
   font-weight: bold;
   ${TextSharedStyle};
 `
-export const Time = styled.p`
-  ${TextSharedStyle};
-`
-export const Location = styled.p`
-  ${TextSharedStyle};
+export const Image = styled(Img)`
+  height: 100%;
 `

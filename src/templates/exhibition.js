@@ -4,34 +4,10 @@ import { graphql } from "gatsby"
 /** components */
 import ExhibitionDetailPage from "../components/ExhibitionDetailPage"
 
-export default ({
-  data: {
-    contentfulExhibition: {
-      slug,
-      title,
-      mynd,
-      opnun,
-      lokun,
-      stadur,
-      aboutEnglish: {
-        childMarkdownRemark: { html: texti_en },
-      },
-      aboutIcelandic: {
-        childMarkdownRemark: { html: texti_is },
-      },
-    },
-  },
-}) => {
+export default ({ data: { contentfulExhibition } }) => {
   return (
     <ExhibitionDetailPage
-      fluid={mynd.fluid}
-      title={title}
-      stadur={stadur}
-      opnun={opnun}
-      lokun={lokun}
-      texti_en={texti_en}
-      texti_is={texti_is}
-      slug={slug}
+      exhibition={contentfulExhibition}
     ></ExhibitionDetailPage>
   )
 }

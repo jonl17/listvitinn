@@ -1,27 +1,18 @@
 import React from "react"
-import EventBlock from "../EventBlock"
 import { initVenues } from "../../state/venueActions"
 import { connect } from "react-redux"
 
-/* 
-  this component will receive a list of events 
-  containing: image, title,
-  event duration, etc...
-*/
+/** components */
+import Block from "./components/Block"
+
 class VenueContainer extends React.Component {
   componentDidMount() {
     this.props.dispatch(initVenues(this.props.queriedVenues))
   }
   render() {
     const { venues } = this.props
-    return venues.map((item, index) => (
-      <EventBlock
-        key={index}
-        title={item.node.title}
-        image={item.node.mynd}
-        slug={item.node.slug}
-        category={this.props.category}
-      />
+    return venues.map((venue, index) => (
+      <Block key={index} venue={venue.node} />
     ))
   }
 }
